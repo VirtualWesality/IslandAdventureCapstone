@@ -1,0 +1,44 @@
+Initialize engine version: 5.6.0f3 (497a0f351392)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 760 (ID=0x1187)
+    Vendor:   NVIDIA
+    VRAM:     2017 MB
+    Driver:   21.21.13.7653
+Begin MonoManager ReloadAssembly
+Platform assembly: H:\Capstone Stuff\Used for Testing (4_23_17)\StartMenu\IA9_Title_Screen\test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading H:\Capstone Stuff\Used for Testing (4_23_17)\StartMenu\IA9_Title_Screen\test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: H:\Capstone Stuff\Used for Testing (4_23_17)\StartMenu\IA9_Title_Screen\test_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading H:\Capstone Stuff\Used for Testing (4_23_17)\StartMenu\IA9_Title_Screen\test_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: H:\Capstone Stuff\Used for Testing (4_23_17)\StartMenu\IA9_Title_Screen\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading H:\Capstone Stuff\Used for Testing (4_23_17)\StartMenu\IA9_Title_Screen\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: H:\Capstone Stuff\Used for Testing (4_23_17)\StartMenu\IA9_Title_Screen\test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading H:\Capstone Stuff\Used for Testing (4_23_17)\StartMenu\IA9_Title_Screen\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: H:\Capstone Stuff\Used for Testing (4_23_17)\StartMenu\IA9_Title_Screen\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading H:\Capstone Stuff\Used for Testing (4_23_17)\StartMenu\IA9_Title_Screen\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: H:\Capstone Stuff\Used for Testing (4_23_17)\StartMenu\IA9_Title_Screen\test_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading H:\Capstone Stuff\Used for Testing (4_23_17)\StartMenu\IA9_Title_Screen\test_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.041 seconds
+Platform assembly: H:\Capstone Stuff\Used for Testing (4_23_17)\StartMenu\IA9_Title_Screen\test_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: H:\Capstone Stuff\Used for Testing (4_23_17)\StartMenu\IA9_Title_Screen\test_Data\Managed\System.dll (this message is harmless)
+<RI> Initializing input.
+<RI> Input initialized.
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
+<RI> Initialized touch support.
+UnloadTime: 1.885902 ms
+Setting up 4 worker threads for Enlighten.
+  Thread -> id: 42b4 -> priority: 1 
+  Thread -> id: 48e4 -> priority: 1 
+  Thread -> id: 4580 -> priority: 1 
+  Thread -> id: 3ff4 -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 12.707459 ms
+
+Unloading 54 unused Assets to reduce memory usage. Loaded Objects now: 609.
+Total: 9.472814 ms (FindLiveObjects: 0.059099 ms CreateObjectMapping: 0.033938 ms MarkObjects: 0.435928 ms  DeleteObjects: 8.943261 ms)
+
+Warning: no main camera found. Third person character needs a Camera tagged "MainCamera", for camera-relative controls.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
