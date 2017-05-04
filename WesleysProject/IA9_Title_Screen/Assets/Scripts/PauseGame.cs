@@ -7,9 +7,20 @@ public class PauseGame : MonoBehaviour {
 
     public Transform canvas;
     public Transform Player;
-	
-	// Update is called once per frame
-	void Update ()
+    public GameObject pauseMenu;
+    public GameObject pauseBackground;
+
+    //TODO: IMPLEMENT OPTIONS MENU AND GET A WORKING EXIT BUTTON!!!SS
+
+
+    void Start()
+    {
+        pauseMenu.SetActive(false);
+        pauseBackground.SetActive(false);
+    }
+
+    // Update is called once per frame
+    void Update ()
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
@@ -19,12 +30,10 @@ public class PauseGame : MonoBehaviour {
 
     public void Pause()
     {
-        if (canvas.gameObject.activeInHierarchy == false)
-        {
-            canvas.gameObject.SetActive(true);
-            Time.timeScale = 0;
-            Player.GetComponent<ThirdPersonUserControl>().enabled = false;
-        }     
+        pauseMenu.SetActive(true);
+        pauseBackground.SetActive(true);
+        Time.timeScale = 0;
+        Player.GetComponent<ThirdPersonUserControl>().enabled = false;           
     }
 
     public void ExitGame()
@@ -34,7 +43,8 @@ public class PauseGame : MonoBehaviour {
 
     public void ContinuePress()
     {
-        canvas.gameObject.SetActive(false);
+        pauseMenu.SetActive(false);
+        pauseBackground.SetActive(false);
         Time.timeScale = 1;
         Player.GetComponent<ThirdPersonUserControl>().enabled = true;
     }
