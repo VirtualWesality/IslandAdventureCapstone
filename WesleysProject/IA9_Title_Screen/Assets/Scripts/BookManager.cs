@@ -30,10 +30,15 @@ public class BookManager : MonoBehaviour {
         //So instead of open on Trigger, trigger only pops up a button prompt
         //and you wont have to disable/enable any triggers.
         book.SetActive(true);
-        bookCol.enabled = false;
-        
+               
     }
 
+    
+    void OnTriggerExit(Collider other)
+    {
+        book.SetActive(false);
+    }
+    
 
     //TODO: Create Exit, Next, and Previous buttons for book UI
     public void ExitPress()

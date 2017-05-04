@@ -2,7 +2,7 @@
 <doc>
   <members>
     <assembly>
-      <name>UnityEditor.Purchasing</name>
+      <name>UnityEditor.PlaymodeTestsRunner</name>
     </assembly>
   </members>
 </doc>
