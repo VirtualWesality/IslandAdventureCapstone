@@ -156,7 +156,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &183440
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,7 +260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
   BookPanel: {fileID: 22443772}
-  background: {fileID: 21300000, guid: b38f1555bc2bc5246a7c1a87e231e51c, type: 3}
+  background: {fileID: 21300000, guid: 46ee513ab59a3f648abfc0c6753ae196, type: 3}
   bookPages:
   - {fileID: 21300000, guid: 040a052b172de334fb6bf6370dfb3525, type: 3}
   - {fileID: 21300000, guid: 46ee513ab59a3f648abfc0c6753ae196, type: 3}
