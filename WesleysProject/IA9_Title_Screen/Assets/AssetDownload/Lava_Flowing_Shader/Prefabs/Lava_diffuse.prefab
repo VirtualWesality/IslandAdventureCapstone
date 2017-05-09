@@ -61,7 +61,6 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &3393480
 MeshFilter:
@@ -82,7 +81,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uvAnimationRate: {x: 0.06, y: 0}
-  textureName: _LavaTex
+  textureName: 5f4c617661546578
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

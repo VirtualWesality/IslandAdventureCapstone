@@ -61,7 +61,7 @@ Material:
     m_Colors:
     - first:
         name: <noninit>
-      second: {r: 0, g: 1.4707556e-34, b: 0, a: 1.4707482e-34}
+      second: {r: 0, g: 1.262682e-34, b: 0, a: 1.2626747e-34}
     - first:
         name: _AnimationDirection
       second: {r: 1, g: 1, b: 1, a: 1}
