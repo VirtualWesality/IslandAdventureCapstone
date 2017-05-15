@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityStandardAssets.Characters.FirstPerson;
+//using UnityStandardAssets.Characters.FirstPerson;
 using UnityEngine.SceneManagement;
 
 public class PauseRoadScene : MonoBehaviour {
-
+    /*
 	GameObject[] pause;
 	public RaycastShoot shootGone01;
 	public RaycastShoot shootGone02;
@@ -84,5 +84,6 @@ public class PauseRoadScene : MonoBehaviour {
 	{
 		SceneManager.LoadScene ("Menu");
 	}
+    */
 }
 	

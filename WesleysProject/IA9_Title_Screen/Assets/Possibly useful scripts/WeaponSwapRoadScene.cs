@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-using UnityStandardAssets.Characters.FirstPerson;
+//using UnityStandardAssets.Characters.FirstPerson;
 
 public class WeaponSwapRoadScene : MonoBehaviour {
-
+/*
 	public GameObject weapon01;
 	public GameObject weapon02;
 
@@ -166,4 +166,5 @@ public class WeaponSwapRoadScene : MonoBehaviour {
 			}
 		}
 	}
+    */
 }

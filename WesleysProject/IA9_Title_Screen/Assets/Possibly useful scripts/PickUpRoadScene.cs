@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-using UnityStandardAssets.Characters.FirstPerson;
+//using UnityStandardAssets.Characters.FirstPerson;
 
-public class PickUpRoadScene : MonoBehaviour {
-
+public class PickUpRoadScene : MonoBehaviour
+{
+    /*
 	public Text magText;
 	public int numMags;
 	public RaycastShoot numAmmo01;
@@ -74,4 +75,5 @@ public class PickUpRoadScene : MonoBehaviour {
 			Destroy (other.gameObject);
 		}
 	}
+    */
 }

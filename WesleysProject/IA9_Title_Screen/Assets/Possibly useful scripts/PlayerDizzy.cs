@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityStandardAssets.Characters.FirstPerson;
+//using UnityStandardAssets.Characters.FirstPerson;
 
 public class PlayerDizzy : MonoBehaviour {
-
+    /*
 	public FirstPersonController player;
 
 	void OnTriggerStay (Collider other)
@@ -25,4 +25,5 @@ public class PlayerDizzy : MonoBehaviour {
 			player.m_MouseLook.smoothTime = 5f;
 		}
 	}
+    */
 }

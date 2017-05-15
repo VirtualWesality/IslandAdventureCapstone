@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-using UnityStandardAssets.Characters.FirstPerson;
+//using UnityStandardAssets.Characters.FirstPerson;
 using UnityEngine.SceneManagement;
 
-public class Pause : MonoBehaviour {
+public class Pause : MonoBehaviour
+{
+    /*
 	GameObject[] pause;
 
 	public FirstPersonController player;
@@ -77,6 +79,7 @@ public class Pause : MonoBehaviour {
 	public void ExitGame(){
 		Application.Quit();
 	}
+    */
 }
 
 
