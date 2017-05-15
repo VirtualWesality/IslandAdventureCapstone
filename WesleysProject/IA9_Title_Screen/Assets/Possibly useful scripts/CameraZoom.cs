@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityStandardAssets.Characters.FirstPerson;
+//using UnityStandardAssets.Characters.FirstPerson;
 
 public class CameraZoom : MonoBehaviour {
-
+/*
 	//Reticle zoom in when weapons are activated.
 
 	public int zoom = 20;
@@ -40,4 +40,5 @@ public class CameraZoom : MonoBehaviour {
 			zoomSense.m_MouseLook.YSensitivity = 2;
 		}
 	}
+    */
 }

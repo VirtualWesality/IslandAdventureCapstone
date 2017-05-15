@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-using UnityStandardAssets.Vehicles.Car;
+//using UnityStandardAssets.Vehicles.Car;
 
-public class EnterVehicle : MonoBehaviour {
+public class EnterVehicle : MonoBehaviour
+{
+    /*
 	public GameObject Vehicle;
 	public GameObject Player;
 	public GameObject PlayerBackup;
@@ -76,4 +78,5 @@ public class EnterVehicle : MonoBehaviour {
 			
 		}
 	}
+    */
 }
