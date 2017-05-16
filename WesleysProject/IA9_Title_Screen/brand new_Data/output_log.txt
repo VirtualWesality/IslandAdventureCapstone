@@ -2,39 +2,39 @@ Initialize engine version: 5.5.0f3 (38b4efef76f0)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce GTX 760 (ID=0x1187)
+    Renderer: NVIDIA GeForce GT 640M (ID=0xfd8)
     Vendor:   NVIDIA
-    VRAM:     2017 MB
-    Driver:   21.21.13.7653
+    VRAM:     2254 MB
+    Driver:   9.18.13.637
 Begin MonoManager ReloadAssembly
-Platform assembly: F:\CapstoneStuff\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\brand new_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading F:\CapstoneStuff\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\brand new_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: F:\CapstoneStuff\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\brand new_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading F:\CapstoneStuff\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\brand new_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: F:\CapstoneStuff\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\brand new_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading F:\CapstoneStuff\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\brand new_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: F:\CapstoneStuff\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\brand new_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading F:\CapstoneStuff\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\brand new_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: F:\CapstoneStuff\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\brand new_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
-Loading F:\CapstoneStuff\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\brand new_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-Platform assembly: F:\CapstoneStuff\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\brand new_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
-Loading F:\CapstoneStuff\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\brand new_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.064 seconds
-Platform assembly: F:\CapstoneStuff\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\brand new_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: F:\CapstoneStuff\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\brand new_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\Student\Desktop\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\brand new_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Student\Desktop\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\brand new_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Student\Desktop\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\brand new_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Student\Desktop\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\brand new_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Student\Desktop\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\brand new_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Student\Desktop\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\brand new_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Student\Desktop\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\brand new_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Student\Desktop\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\brand new_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Student\Desktop\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\brand new_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\Student\Desktop\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\brand new_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: C:\Users\Student\Desktop\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\brand new_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\Student\Desktop\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\brand new_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.030 seconds
+Platform assembly: C:\Users\Student\Desktop\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\brand new_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Student\Desktop\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\brand new_Data\Managed\System.dll (this message is harmless)
 <RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
-desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
+desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
 <RI> Initialized touch support.
-UnloadTime: 1.933299 ms
-Setting up 2 worker threads for Enlighten.
-  Thread -> id: 3b48 -> priority: 1 
-  Thread -> id: 47a8 -> priority: 1 
+UnloadTime: 2.540680 ms
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 16a0 -> priority: 1 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 15.303726 ms
+UnloadTime: 9.090421 ms
 
 Unloading 77 unused Assets to reduce memory usage. Loaded Objects now: 1742.
-Total: 5.423068 ms (FindLiveObjects: 0.191925 ms CreateObjectMapping: 0.095377 ms MarkObjects: 1.488886 ms  DeleteObjects: 3.646001 ms)
+Total: 2.596557 ms (FindLiveObjects: 0.094648 ms CreateObjectMapping: 0.063479 ms MarkObjects: 0.835870 ms  DeleteObjects: 1.602179 ms)
 
 Warning: no main camera found. Third person character needs a Camera tagged "MainCamera", for camera-relative controls.
  

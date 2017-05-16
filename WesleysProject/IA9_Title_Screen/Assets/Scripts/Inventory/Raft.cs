@@ -31,8 +31,7 @@ public class Raft : MonoBehaviour {
     }
 
     public void OnYesPress()
-    {
-        Application.Quit();
+    {    
         SceneManager.LoadScene("IslandTwoElectricBoogaloo");
     }
 
