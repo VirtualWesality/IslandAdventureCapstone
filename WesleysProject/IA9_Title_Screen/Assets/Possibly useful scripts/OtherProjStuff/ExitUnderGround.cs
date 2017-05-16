@@ -4,17 +4,17 @@ using UnityEngine.SceneManagement;
 
 public class ExitUnderGround : MonoBehaviour {
 
-	LoadScene sendToLoading;
+	//LoadScene sendToLoading;
 
 	void Start ()
 	{
-		sendToLoading = GetComponent<LoadScene> ();
+		//sendToLoading = GetComponent<LoadScene> ();
 	}
 
 	void OnTriggerStay (Collider other)
 	{
 		if (other.gameObject.tag == "Player") {
-			sendToLoading.LoadSceneNum (3);
+			//sendToLoading.LoadSceneNum (3);
 		}
 	}
 

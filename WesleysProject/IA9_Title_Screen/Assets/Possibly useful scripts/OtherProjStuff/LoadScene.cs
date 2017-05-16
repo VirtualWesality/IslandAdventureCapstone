@@ -2,8 +2,9 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class LoadScene : MonoBehaviour {
-
+public class LoadScene : MonoBehaviour
+{
+    /*
 	public void LoadSceneNum (int num)
 	{
 		if (num < 0 || num >= SceneManager.sceneCountInBuildSettings) {
@@ -13,4 +14,5 @@ public class LoadScene : MonoBehaviour {
 		}
 		LoadingScreenManager.LoadScene (num);
 	}
+    */
 }

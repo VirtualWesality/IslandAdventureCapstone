@@ -12,7 +12,7 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class LoadingScreenManager : MonoBehaviour {
-
+    /*
 	[Header("Loading Visuals")]
 	public Image loadingIcon;
 	public Image loadingDoneIcon;
@@ -127,5 +127,5 @@ public class LoadingScreenManager : MonoBehaviour {
 		progressBar.fillAmount = 1f;
 		loadingText.text = "LOADING DONE";
 	}
-
+    */
 }
