@@ -10,6 +10,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Island1.unity
   - enabled: 1
-    path: Assets/Island2/IslandTwoElectricBoogaloo.unity
+    path: Assets/Scenes/IslandTwoElectricBoogaloo.unity
   - enabled: 1
-    path: Assets/Island3/island3.unity
+    path: Assets/Scenes/island3.unity
