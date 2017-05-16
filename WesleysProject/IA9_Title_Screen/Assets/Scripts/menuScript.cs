@@ -64,6 +64,6 @@ public class menuScript : MonoBehaviour {
 
     public void ExitGame()
     {
-        Application.Quit();
+        SceneManager.LoadScene("Title");
     }
 }
