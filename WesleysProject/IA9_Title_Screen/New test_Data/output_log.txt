@@ -7,36 +7,36 @@ Direct3D:
     VRAM:     2017 MB
     Driver:   21.21.13.7653
 Begin MonoManager ReloadAssembly
-Platform assembly: E:\StartMenu\IA9_Title_Screen\New test_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading E:\StartMenu\IA9_Title_Screen\New test_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: E:\StartMenu\IA9_Title_Screen\New test_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading E:\StartMenu\IA9_Title_Screen\New test_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: E:\StartMenu\IA9_Title_Screen\New test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading E:\StartMenu\IA9_Title_Screen\New test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: E:\StartMenu\IA9_Title_Screen\New test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading E:\StartMenu\IA9_Title_Screen\New test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: E:\StartMenu\IA9_Title_Screen\New test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading E:\StartMenu\IA9_Title_Screen\New test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: E:\StartMenu\IA9_Title_Screen\New test_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
-Loading E:\StartMenu\IA9_Title_Screen\New test_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.322 seconds
-Platform assembly: E:\StartMenu\IA9_Title_Screen\New test_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: E:\StartMenu\IA9_Title_Screen\New test_Data\Managed\System.dll (this message is harmless)
+Platform assembly: F:\CapstoneStuff\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\New test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading F:\CapstoneStuff\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\New test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: F:\CapstoneStuff\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\New test_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading F:\CapstoneStuff\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\New test_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: F:\CapstoneStuff\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\New test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading F:\CapstoneStuff\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\New test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: F:\CapstoneStuff\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\New test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading F:\CapstoneStuff\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\New test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: F:\CapstoneStuff\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\New test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading F:\CapstoneStuff\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\New test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: F:\CapstoneStuff\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\New test_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading F:\CapstoneStuff\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\New test_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  1.755 seconds
+Platform assembly: F:\CapstoneStuff\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\New test_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: F:\CapstoneStuff\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\New test_Data\Managed\System.dll (this message is harmless)
 <RI> Initializing input.
 <RI> Input initialized.
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
 <RI> Initialized touch support.
-UnloadTime: 1.592748 ms
+UnloadTime: 1.911649 ms
 Setting up 4 worker threads for Enlighten.
-  Thread -> id: 3714 -> priority: 1 
-  Thread -> id: 5788 -> priority: 1 
-  Thread -> id: 4db4 -> priority: 1 
-  Thread -> id: 4fd4 -> priority: 1 
+  Thread -> id: 21a0 -> priority: 1 
+  Thread -> id: 2c8 -> priority: 1 
+  Thread -> id: 3aa0 -> priority: 1 
+  Thread -> id: 41b4 -> priority: 1 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 7.697794 ms
+UnloadTime: 10.526359 ms
 
-Unloading 62 unused Assets to reduce memory usage. Loaded Objects now: 614.
-Total: 10.076969 ms (FindLiveObjects: 0.066413 ms CreateObjectMapping: 0.035693 ms MarkObjects: 0.445875 ms  DeleteObjects: 9.527523 ms)
+Unloading 62 unused Assets to reduce memory usage. Loaded Objects now: 610.
+Total: 12.765979 ms (FindLiveObjects: 0.089233 ms CreateObjectMapping: 0.054710 ms MarkObjects: 0.443827 ms  DeleteObjects: 12.177328 ms)
 
 Warning: no main camera found. Third person character needs a Camera tagged "MainCamera", for camera-relative controls.
  

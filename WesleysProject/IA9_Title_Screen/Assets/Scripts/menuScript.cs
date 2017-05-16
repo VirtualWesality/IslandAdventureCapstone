@@ -30,20 +30,23 @@ public class menuScript : MonoBehaviour {
         quitMenu.enabled = true;
         startText.enabled = false;
         exitText.enabled = false;
+        optionsText.enabled = false;
     }
 
     public void OptionsPress()
     {
         optionsMenu.enabled = true;
+        optionsText.enabled = false;    
         startText.enabled = false;
-        exitText.enabled = false;
+        exitText.enabled = false;     
     }
 
     public void ConfirmPress()
     {
         optionsMenu.enabled = false;
+        optionsText.enabled = true;       
         startText.enabled = true;
-        exitText.enabled = true;
+        exitText.enabled = true;      
     }
 
     public void NoPress()
@@ -51,6 +54,7 @@ public class menuScript : MonoBehaviour {
         quitMenu.enabled = false;
         startText.enabled = true;
         exitText.enabled = true;
+        optionsText.enabled = true;
     }
 
     public void StartLevel()
