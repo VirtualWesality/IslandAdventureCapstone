@@ -2,7 +2,7 @@
 /*
 /*/
 
-# Inverse ignore some stuff
+# Inverse ignore some stuff and things
 !/Assets/
 !/ProjectSettings/
 !.gitignore
