@@ -2,10 +2,11 @@
 /*
 /*/
 
-# Inverse ignore some stuff
+# Inverse ignore some stuff and things
 !/Assets/
 !/ProjectSettings/
 !.gitignore
+!/TimeTrackingDocument
 
 # OS Stuff
 .DS_Store
