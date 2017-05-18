@@ -1,13 +1,14 @@
 # Ignore everything
 /*
 /*/
-
+/WesleysProject/IA9_Title_Screen/Library
 # Inverse ignore some stuff and things
 !/Assets/
 !/ProjectSettings/
 !.gitignore
 !/TimeTrackingDocument
 !/AssetProjectCatandSquirrel
+
 # OS Stuff
 .DS_Store
 ._*
