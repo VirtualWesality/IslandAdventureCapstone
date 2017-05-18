@@ -7,7 +7,7 @@
 !/ProjectSettings/
 !.gitignore
 !/TimeTrackingDocument
-
+!/AssetProjectCatandSquirrel
 # OS Stuff
 .DS_Store
 ._*
