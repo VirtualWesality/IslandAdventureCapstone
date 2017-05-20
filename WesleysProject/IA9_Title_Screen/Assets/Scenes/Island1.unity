@@ -333,6 +333,47 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c2ed77504091e0b429273ca7204fcca2, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &235253370
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 235253371}
+  - component: {fileID: 235253372}
+  m_Layer: 0
+  m_Name: RaftLocationCollider
+  m_TagString: Raft
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &235253371
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 235253370}
+  m_LocalRotation: {x: -0, y: 0.7523939, z: -0, w: 0.6587135}
+  m_LocalPosition: {x: 14.23, y: -0.13661957, z: -46.28}
+  m_LocalScale: {x: 19.410048, y: 19.410042, z: 19.410042}
+  m_Children: []
+  m_Father: {fileID: 673206905}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &235253372
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 235253370}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &251040784
 GameObject:
   m_ObjectHideFlags: 0
@@ -1879,6 +1920,7 @@ Transform:
   - {fileID: 145982123}
   - {fileID: 1077074888}
   - {fileID: 1713991036}
+  - {fileID: 235253371}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3534,8 +3576,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1722978761}
-  m_LocalRotation: {x: 0.00677193, y: 0.9580291, z: 0.2856899, w: -0.022708792}
-  m_LocalPosition: {x: 245.83578, y: -0.036136627, z: 260.56277}
+  m_LocalRotation: {x: 0.031803634, y: 0.9386698, z: 0.3313135, w: -0.090105236}
+  m_LocalPosition: {x: 258.0003, y: -20.209824, z: 258.74}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
