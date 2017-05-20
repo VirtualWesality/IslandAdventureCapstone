@@ -11,19 +11,27 @@ public class BookManager : MonoBehaviour {
     public Button bookExit;
     public Collider bookCol;
     public Collider raftCol;
+    private bool HasJournal;
 
 	// Use this for initialization
 	void Start ()
     {
         book.SetActive(false);
+        HasJournal = false;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        if (Input.GetKeyDown(KeyCode.H))
+        if (Input.GetKeyDown(KeyCode.J))
         {
-            ExitPress();
+            if (HasJournal)
+            {
+                if (book.activeSelf)
+                    book.SetActive(false);
+                else
+                    book.SetActive(true);
+            }
         }
     }
 
@@ -35,6 +43,8 @@ public class BookManager : MonoBehaviour {
         if (this.GetComponent<Collider>() == bookCol)
         {
             book.SetActive(true);
+            HasJournal = true;
+            Destroy(GameObject.FindGameObjectWithTag("Journal"));
         }
 
         if (this.GetComponent<Collider>() == raftCol)
