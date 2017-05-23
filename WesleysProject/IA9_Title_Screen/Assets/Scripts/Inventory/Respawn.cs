@@ -15,16 +15,33 @@ public class Respawn : MonoBehaviour {
 
     public GameObject cork;
     public int respawnTime = 5;
+    public PickUp pickUpScript;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerStay(Collider collider)
     {
-        
-        this.GetComponent<SphereCollider>().enabled = false;
-        this.GetComponent<MeshRenderer>().enabled = false;
-        cork.GetComponent<MeshRenderer>().enabled = false;
+        if (Input.GetKey(KeyCode.F))
+        {
+            Debug.Log("Come on man");
+            this.GetComponent<SphereCollider>().enabled = false;
+            
+            this.GetComponent<MeshRenderer>().enabled = false;
+            if (this.gameObject.tag == "RopeCoil")
+            {              
+                for (int i = 0; i < 6; i++)
+                {
+                    this.gameObject.transform.GetChild(i).GetComponent<MeshRenderer>().enabled = false;
+                }
+            }
+            if (this.gameObject.tag == "Rum")
+            {
+                cork.GetComponent<MeshRenderer>().enabled = false;
+            }
+            Invoke("Respawn_1", respawnTime);
+            pickUpScript.pickedUp = true;
+        }
 
 
-        Invoke("Respawn_1", respawnTime);
+      
     }
     void Respawn_1()
     {

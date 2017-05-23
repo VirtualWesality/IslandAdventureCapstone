@@ -29,22 +29,25 @@ public class PickUp : MonoBehaviour {
     public GameObject InventoryPanel;
     public GameObject[] InventoryIcon;
     public GameObject AudioManager;
+    public bool pickedUp;
 
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerStay(Collider collision)
     {
-        //look through children for existing icon
-        foreach(Transform child in InventoryPanel.transform)
+        if (pickedUp == true)
         {
-            //if item already in inventory
-            if (child.gameObject.tag == collision.gameObject.tag)
+            //look through children for existing icon
+            foreach (Transform child in InventoryPanel.transform)
             {
-                string c = child.Find("Text").GetComponent<Text>().text;
-                int tcount = System.Int32.Parse(c) + 1;
-                child.Find("Text").GetComponent<Text>().text = "" + tcount;
-                return;
+                //if item already in inventory
+                if (child.gameObject.tag == collision.gameObject.tag)
+                {
+                    string c = child.Find("Text").GetComponent<Text>().text;
+                    int tcount = System.Int32.Parse(c) + 1;
+                    child.Find("Text").GetComponent<Text>().text = "" + tcount;
+                    return;
+                }
             }
-        }
         //contains definitions for the items here will work on a better way to do this 
         //later
         GameObject i;
@@ -61,11 +64,16 @@ public class PickUp : MonoBehaviour {
             i.transform.SetParent(InventoryPanel.transform);
         }
 
-        if (collision.gameObject.tag == "BlueFruit")
+        if (collision.gameObject.tag == "RopeCoil")
         {
             i = Instantiate(InventoryIcon[2]);
             i.transform.SetParent(InventoryPanel.transform);
+
         }
+            pickedUp = false;
+        }
+
+        
     }
     // Use this for initialization
     void Start () {
