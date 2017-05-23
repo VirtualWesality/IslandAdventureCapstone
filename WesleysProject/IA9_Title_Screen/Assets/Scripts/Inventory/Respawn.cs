@@ -13,12 +13,16 @@ public class Respawn : MonoBehaviour {
     /// this. 
     /// </summary>
 
+    public GameObject cork;
     public int respawnTime = 5;
 
     private void OnCollisionEnter(Collision collision)
     {
+        
         this.GetComponent<SphereCollider>().enabled = false;
         this.GetComponent<MeshRenderer>().enabled = false;
+        cork.GetComponent<MeshRenderer>().enabled = false;
+
 
         Invoke("Respawn_1", respawnTime);
     }
@@ -26,6 +30,8 @@ public class Respawn : MonoBehaviour {
     {
         this.GetComponent<SphereCollider>().enabled = true;
         this.GetComponent<MeshRenderer>().enabled = true;
+        cork.GetComponent<MeshRenderer>().enabled = true;
+
     }
     // Use this for initialization
     void Start ()
