@@ -28,6 +28,7 @@ public class PickUp : MonoBehaviour {
 
     public GameObject InventoryPanel;
     public GameObject[] InventoryIcon;
+    public GameObject AudioManager;
 
 
     private void OnCollisionEnter(Collision collision)
@@ -48,13 +49,13 @@ public class PickUp : MonoBehaviour {
         //later
         GameObject i;
 
-        if (collision.gameObject.tag == "RedFruit")
+        if (collision.gameObject.tag == "Coconut")
         {
             i = Instantiate(InventoryIcon[0]);
             i.transform.SetParent(InventoryPanel.transform);
         }
 
-        if (collision.gameObject.tag == "GreenFruit")
+        if (collision.gameObject.tag == "Rum")
         {
             i = Instantiate(InventoryIcon[1]);
             i.transform.SetParent(InventoryPanel.transform);
