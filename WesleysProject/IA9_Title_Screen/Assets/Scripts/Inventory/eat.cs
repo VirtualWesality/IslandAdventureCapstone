@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class eat : MonoBehaviour {
+public class eat : MonoBehaviour
+{
+    public GameObject AudioManager;
     /// <summary>
     /// Written by: Tim Allen
     /// Credit To: Holistic3d A Simple GUI Inventory, Object Pickup and Respawn in Unity 5
@@ -14,6 +16,9 @@ public class eat : MonoBehaviour {
     /// the inventory. This is done do not touch. 
     /// </summary>
 
+
+        //Add different eatme() funcstions for the different Items. logs may not be able to be consumed
+        //Certain objects can play a certain sound when consumed
     public void eatme()
     {
         if (System.Int32.Parse(this.transform.Find("Text").GetComponent<Text>().text) > 1)

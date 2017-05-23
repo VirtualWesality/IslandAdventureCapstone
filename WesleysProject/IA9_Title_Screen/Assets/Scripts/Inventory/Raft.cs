@@ -12,7 +12,7 @@ public class Raft : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-		
+        Time.timeScale = 1;
 	}
 	
 	// Update is called once per frame
@@ -31,8 +31,15 @@ public class Raft : MonoBehaviour {
     }
 
     public void OnYesPress()
-    {    
-        SceneManager.LoadScene("IslandTwoElectricBoogaloo");
+    {
+        if (SceneManager.GetActiveScene().name == "Island1")
+        { SceneManager.LoadScene("IslandTwoElectricBoogaloo"); }
+        else if (SceneManager.GetActiveScene().name == "IslandTwoElectricBoogaloo")
+        { SceneManager.LoadScene("island3"); }
+        else if (SceneManager.GetActiveScene().name == "island3")
+        { SceneManager.LoadScene("Title"); }
+        Time.timeScale = 1;
+        
     }
 
     public void OnNoPress()

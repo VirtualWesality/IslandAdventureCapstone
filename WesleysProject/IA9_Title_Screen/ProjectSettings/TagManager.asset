@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Raft
+  - Journal
+  - Coconut
+  - Rum
   layers:
   - Default
   - TransparentFX

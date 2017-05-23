@@ -11,7 +11,8 @@ using UnityEngine;
 /// This just randomly spawns an object in a given range using a vector. It is pretty 
 /// simple. Could be modified to do a couple of things.
 /// </summary>
-public class FruitSpawn : MonoBehaviour {
+public class FruitSpawn : MonoBehaviour
+{
     //tells the script to expect a game object it does not need to be named fruit
     public GameObject fruit;
     //spawns the number of fruits set here

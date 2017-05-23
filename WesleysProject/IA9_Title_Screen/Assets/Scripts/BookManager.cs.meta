@@ -1,10 +1,14 @@
 fileFormatVersion: 2
 guid: 018db30be875fa848a67a34ff145c0aa
-timeCreated: 1493107366
+timeCreated: 1495252917
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - book: {fileID: 180032, guid: fe9bfb5044c0cc646baba1ad7d354100, type: 2}
+  - bookExit: {instanceID: 0}
+  - bookCol: {instanceID: 0}
+  - raftCol: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.Events;
+
 public enum FlipMode
 {
     RightToLeft,
@@ -18,6 +19,7 @@ public class Book : MonoBehaviour {
     public bool enableShadowEffect=true;
     //represent the index of the sprite shown in the right page
     public int currentPage = 0;
+
     public int TotalPageCount
     {
         get { return bookPages.Length; }
@@ -279,7 +281,7 @@ public class Book : MonoBehaviour {
 
         Right.gameObject.SetActive(true);
         Right.transform.position = LeftNext.transform.position;
-        Right.sprite = bookPages[currentPage - 1];
+        Right.sprite = bookPages[currentPage - 2];
         Right.transform.eulerAngles = new Vector3(0, 0, 0);
         Right.transform.SetAsFirstSibling();
 

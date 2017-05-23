@@ -65,5 +65,6 @@ public class menuScript : MonoBehaviour {
     public void ExitGame()
     {
         SceneManager.LoadScene("Title");
+        Time.timeScale = 1;
     }
 }

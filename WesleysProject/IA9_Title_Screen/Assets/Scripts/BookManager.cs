@@ -3,24 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class BookManager : MonoBehaviour {
+
 
     public GameObject book;
     public Button bookExit;
     public Collider bookCol;
+    public Collider raftCol;
+    private bool HasJournal;
 
 	// Use this for initialization
 	void Start ()
     {
         book.SetActive(false);
+        HasJournal = false;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        if (Input.GetKeyDown(KeyCode.H))
+        if (Input.GetKeyDown(KeyCode.J))
         {
-            ExitPress();
+            if (HasJournal)
+            {
+                if (book.activeSelf)
+                    book.SetActive(false);
+                else
+                    book.SetActive(true);
+            }
         }
     }
 
@@ -29,7 +40,23 @@ public class BookManager : MonoBehaviour {
         //TODO: make a UI button pop up that tells the player what button to press to open book
         //So instead of open on Trigger, trigger only pops up a button prompt
         //and you wont have to disable/enable any triggers.
-        book.SetActive(true);
+        if (this.GetComponent<Collider>() == bookCol)
+        {
+            book.SetActive(true);
+            HasJournal = true;
+            Destroy(GameObject.FindGameObjectWithTag("Journal"));
+        }
+
+        if (this.GetComponent<Collider>() == raftCol)
+        {
+            //Dietrich->
+            //TODO:  Reference Book.cs, then -if (!bookpages[].contains bookpage_Raft) bookPages[]++ >> bookPages[totalPageCount] = sprite: bookpage_Raft
+            //Unsure how to reference the Book.cs script.  From there, it should be a simple matter to increment the number of pages, and change the last page to be bookpage_Raft.
+            //After that, make a collider for various objects we want to add to the journal, copy/paste, but instead of raftCol, use CatCol or whatever.  Could also
+            //create a bool for each page such as ContainsRaft() which will check if it contains the raft page.  Wouldn't be too difficult, but you'd only need to call that during a specific collision
+            //so it isn't really necessary.
+            //<- Dietrich
+        }
                
     }
 

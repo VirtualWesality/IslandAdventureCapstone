@@ -10,8 +10,6 @@ public class PauseGame : MonoBehaviour {
     public GameObject pauseMenu;
     public GameObject pauseBackground;
 
-    //TODO: IMPLEMENT OPTIONS MENU AND GET A WORKING EXIT BUTTON!!!SS
-
 
     void Start()
     {
@@ -32,8 +30,7 @@ public class PauseGame : MonoBehaviour {
     {
         pauseMenu.SetActive(true);
         pauseBackground.SetActive(true);
-        Time.timeScale = 0;
-        Player.GetComponent<ThirdPersonUserControl>().enabled = false;           
+        Time.timeScale = 0;          
     }
 
     public void ExitGame()
@@ -45,7 +42,6 @@ public class PauseGame : MonoBehaviour {
     {
         pauseMenu.SetActive(false);
         pauseBackground.SetActive(false);
-        Time.timeScale = 1;
-        Player.GetComponent<ThirdPersonUserControl>().enabled = true;
+        Time.timeScale = 1;      
     }
 }
