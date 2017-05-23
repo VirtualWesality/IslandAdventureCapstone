@@ -13,12 +13,14 @@ public class Respawn : MonoBehaviour {
     /// this. 
     /// </summary>
 
+    public int respawnTime = 5;
+
     private void OnCollisionEnter(Collision collision)
     {
         this.GetComponent<SphereCollider>().enabled = false;
         this.GetComponent<MeshRenderer>().enabled = false;
 
-        Invoke("Respawn_1", 5);
+        Invoke("Respawn_1", respawnTime);
     }
     void Respawn_1()
     {
@@ -26,12 +28,14 @@ public class Respawn : MonoBehaviour {
         this.GetComponent<MeshRenderer>().enabled = true;
     }
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
 		
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 		
 	}
 }
