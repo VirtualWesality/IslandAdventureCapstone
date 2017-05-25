@@ -19,136 +19,14 @@ Platform assembly: F:\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\Al
 Loading F:\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\Alpha_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
 Platform assembly: F:\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\Alpha_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading F:\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\Alpha_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.230 seconds
+- Completed reload, in  0.280 seconds
 Platform assembly: F:\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\Alpha_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: F:\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\Alpha_Data\Managed\System.dll (this message is harmless)
 <RI> Initializing input.
 <RI> Input initialized.
 desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
 <RI> Initialized touch support.
-UnloadTime: 1.576362 ms
+UnloadTime: 2.389411 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 30e4 -> priority: 1 
-  Thread -> id: 5214 -> priority: 1 
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 11.255133 ms
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2201.
-Total: 4.243422 ms (FindLiveObjects: 0.160620 ms CreateObjectMapping: 0.097425 ms MarkObjects: 1.507023 ms  DeleteObjects: 2.477475 ms)
-
-Warning: no main camera found. Third person character needs a Camera tagged "MainCamera", for camera-relative controls.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 6.478650 ms
-
-Unloading 507 unused Assets to reduce memory usage. Loaded Objects now: 1057.
-Total: 3.492982 ms (FindLiveObjects: 0.087478 ms CreateObjectMapping: 0.094792 ms MarkObjects: 0.839965 ms  DeleteObjects: 2.470160 ms)
-
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 6.821541 ms
-
-Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2204.
-Total: 4.059103 ms (FindLiveObjects: 0.127560 ms CreateObjectMapping: 0.097425 ms MarkObjects: 1.404331 ms  DeleteObjects: 2.429201 ms)
-
-Warning: no main camera found. Third person character needs a Camera tagged "MainCamera", for camera-relative controls.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-IndexOutOfRangeException: Array index is out of range.
-  at GameManager.setNextSailingSpot (Int32 currentSalingSpot) [0x00000] in <filename unknown>:0 
-  at MovingRaft.TravelToIsland2 (UnityEngine.Transform currentPoint) [0x00000] in <filename unknown>:0 
-  at MovingRaft.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 7.162676 ms
-
-Unloading 442 unused Assets to reduce memory usage. Loaded Objects now: 945.
-Total: 11.509375 ms (FindLiveObjects: 0.070216 ms CreateObjectMapping: 0.070216 ms MarkObjects: 0.500000 ms  DeleteObjects: 10.868356 ms)
-
-Warning: no main camera found. Third person character needs a Camera tagged "MainCamera", for camera-relative controls.
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at Raft.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at Raft.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at Raft.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at Raft.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at Raft.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at Raft.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at Raft.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 10.389128 ms
-
-Unloading 82 unused Assets to reduce memory usage. Loaded Objects now: 660.
-Total: 2.481863 ms (FindLiveObjects: 0.046225 ms CreateObjectMapping: 0.049151 ms MarkObjects: 0.468403 ms  DeleteObjects: 1.916912 ms)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at Raft.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at Raft.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at Raft.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at Raft.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.781160 ms
-
-Unloading 101 unused Assets to reduce memory usage. Loaded Objects now: 1064.
-Total: 1.791985 ms (FindLiveObjects: 0.055002 ms CreateObjectMapping: 0.037448 ms MarkObjects: 0.582505 ms  DeleteObjects: 1.116443 ms)
-
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 6.545648 ms
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1063.
-Total: 1.545057 ms (FindLiveObjects: 0.083382 ms CreateObjectMapping: 0.052077 ms MarkObjects: 0.903160 ms  DeleteObjects: 0.505851 ms)
-
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 6.410188 ms
-
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1065.
-Total: 1.495320 ms (FindLiveObjects: 0.085137 ms CreateObjectMapping: 0.050029 ms MarkObjects: 0.861323 ms  DeleteObjects: 0.497952 ms)
-
+  Thread -> id: 4524 -> priority: 1 
+  Thread -> id: 2b6c -> priority: 1 
