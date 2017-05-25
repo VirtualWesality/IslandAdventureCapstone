@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class eat : MonoBehaviour
 {
     public GameObject AudioManager;
+
     /// <summary>
     /// Written by: Tim Allen
     /// Credit To: Holistic3d A Simple GUI Inventory, Object Pickup and Respawn in Unity 5
@@ -19,6 +20,7 @@ public class eat : MonoBehaviour
 
         //Add different eatme() funcstions for the different Items. logs may not be able to be consumed
         //Certain objects can play a certain sound when consumed
+
     public void eatme()
     {
         if (System.Int32.Parse(this.transform.Find("Text").GetComponent<Text>().text) > 1)
@@ -32,13 +34,5 @@ public class eat : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

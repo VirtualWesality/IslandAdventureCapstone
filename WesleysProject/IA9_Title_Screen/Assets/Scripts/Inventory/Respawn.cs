@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Respawn : MonoBehaviour {
+public class Respawn : MonoBehaviour
+{
     /// <summary>
     /// Written by: Tim Allen
     /// Credit To: Holistic3dA Simple GUI Inventory, Object Pickup and Respawn in Unity 5
@@ -20,11 +21,17 @@ public class Respawn : MonoBehaviour {
     private void OnTriggerStay(Collider collider)
     {
         if (Input.GetKey(KeyCode.F))
-        {
-            Debug.Log("Come on man");
-            this.GetComponent<SphereCollider>().enabled = false;
+        {           
+            if (this.gameObject.tag == "Log")
+            {
+                this.GetComponent<BoxCollider>().enabled = false;
+            }
+            else {
+                this.GetComponent<SphereCollider>().enabled = false;
+            }
             
             this.GetComponent<MeshRenderer>().enabled = false;
+
             if (this.gameObject.tag == "RopeCoil")
             {              
                 for (int i = 0; i < 6; i++)
@@ -32,33 +39,36 @@ public class Respawn : MonoBehaviour {
                     this.gameObject.transform.GetChild(i).GetComponent<MeshRenderer>().enabled = false;
                 }
             }
+
             if (this.gameObject.tag == "Rum")
             {
                 cork.GetComponent<MeshRenderer>().enabled = false;
             }
+
             Invoke("Respawn_1", respawnTime);
+
             pickUpScript.pickedUp = true;
         }
-
-
-      
+    
     }
+
     void Respawn_1()
     {
-        this.GetComponent<SphereCollider>().enabled = true;
+        if (this.gameObject.tag == "Log")
+        {
+            this.GetComponent<BoxCollider>().enabled = true;
+        }
+        else{
+            this.GetComponent<SphereCollider>().enabled = true;
+        }
+
         this.GetComponent<MeshRenderer>().enabled = true;
-        cork.GetComponent<MeshRenderer>().enabled = true;
+
+        if (this.gameObject.tag == "Rum")
+        {
+            cork.GetComponent<MeshRenderer>().enabled = true;
+        }
 
     }
-    // Use this for initialization
-    void Start ()
-    {
-		
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
+
 }

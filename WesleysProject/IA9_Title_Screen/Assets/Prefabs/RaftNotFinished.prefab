@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1367515341685650}
+  m_IsPrefabParent: 1
+--- !u!1 &1367515341685650
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4813653820212320}
+  - component: {fileID: 33287459651364120}
+  - component: {fileID: 23119964862087240}
+  - component: {fileID: 114155709630430650}
+  - component: {fileID: 135682514410160304}
+  m_Layer: 0
+  m_Name: RaftNotFinished
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4813653820212320
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1367515341685650}
+  m_LocalRotation: {x: -0.07870934, y: 0.33087933, z: 0.9398258, w: 0.03242289}
+  m_LocalPosition: {x: 14.703384, y: -3.7053041, z: -48.786728}
+  m_LocalScale: {x: 20.000166, y: 98.91857, z: 23.897377}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -141.168, y: -286.941, z: 359.349}
+--- !u!23 &23119964862087240
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1367515341685650}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: f374f63701aa23b4d994d015abf7e322, type: 2}
+  - {fileID: 2100000, guid: 3129b5bc4fc376041802e1fefdc97a5c, type: 2}
+  - {fileID: 2100000, guid: 3129b5bc4fc376041802e1fefdc97a5c, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &33287459651364120
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1367515341685650}
+  m_Mesh: {fileID: 4300000, guid: d7da8a4cf86c50f4580445c90fd1d65a, type: 3}
+--- !u!114 &114155709630430650
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1367515341685650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 224464a16cc9fbb49948043f91521b48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leaveIslandText: {fileID: 0}
+  Player: {fileID: 0}
+  inRaftRange: 0
+  finishedRaft: {fileID: 0}
+  playerSpawn: {fileID: 0}
+--- !u!135 &135682514410160304
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1367515341685650}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.03
+  m_Center: {x: 0.000001908275, y: -0.000015412461, z: 0.00000047497818}
