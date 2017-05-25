@@ -12,6 +12,7 @@ public class BookManager : MonoBehaviour {
     public Collider bookCol;
     public Collider raftCol;
     private bool HasJournal;
+    public GameObject InventoryPanel, JournalPanel;
 
 	// Use this for initialization
 	void Start ()
@@ -24,13 +25,21 @@ public class BookManager : MonoBehaviour {
 	void Update ()
     {
         if (Input.GetKeyDown(KeyCode.J))
-        {
+        {           
             if (HasJournal)
             {
                 if (book.activeSelf)
+                {
                     book.SetActive(false);
+                    InventoryPanel.SetActive(true);
+                    JournalPanel.SetActive(true);
+                }
                 else
+                {
+                    InventoryPanel.SetActive(false);
+                    JournalPanel.SetActive(false);
                     book.SetActive(true);
+                }
             }
         }
     }
@@ -43,6 +52,7 @@ public class BookManager : MonoBehaviour {
         if (this.GetComponent<Collider>() == bookCol)
         {
             book.SetActive(true);
+            InventoryPanel.SetActive(false);
             HasJournal = true;
             Destroy(GameObject.FindGameObjectWithTag("Journal"));
         }
@@ -63,11 +73,10 @@ public class BookManager : MonoBehaviour {
     
     void OnTriggerExit(Collider other)
     {
+        JournalPanel.SetActive(true);
         book.SetActive(false);
     }
     
-
-    //TODO: Create Exit, Next, and Previous buttons for book UI
     public void ExitPress()
     {
         book.SetActive(false);

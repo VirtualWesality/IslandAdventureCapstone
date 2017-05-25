@@ -179,7 +179,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e802aafc950178444bb49c0b59790277, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cork: {fileID: 1297356589211178}
   respawnTime: 50
+  pickUpScript: {fileID: 0}
 --- !u!135 &135116693729706768
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -187,8 +189,8 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1894184725720694}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.015
+  m_Radius: 0.07
   m_Center: {x: 0.0000000013969841, y: 0.0017510424, z: -0.0000000018626454}

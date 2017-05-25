@@ -23,57 +23,69 @@ using UnityEngine.UI;
 /// for more information on how this was originally implemented otherwise talk to Tim Allen
 /// </summary>
 
-public class PickUp : MonoBehaviour {
-
-
+public class PickUp : MonoBehaviour
+{
     public GameObject InventoryPanel;
     public GameObject[] InventoryIcon;
     public GameObject AudioManager;
+    public bool pickedUp;
+    public int logCount = 0;
 
-
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerStay(Collider collision)
     {
-        //look through children for existing icon
-        foreach(Transform child in InventoryPanel.transform)
+        if (pickedUp == true)
         {
-            //if item already in inventory
-            if (child.gameObject.tag == collision.gameObject.tag)
+            //look through children for existing icon
+            foreach (Transform child in InventoryPanel.transform)
             {
-                string c = child.Find("Text").GetComponent<Text>().text;
-                int tcount = System.Int32.Parse(c) + 1;
-                child.Find("Text").GetComponent<Text>().text = "" + tcount;
-                return;
+                //if item already in inventory
+                if (child.gameObject.tag == collision.gameObject.tag)
+                {
+                    string c = child.Find("Text").GetComponent<Text>().text;
+                    int tcount = System.Int32.Parse(c) + 1;
+                    child.Find("Text").GetComponent<Text>().text = "" + tcount;
+                    pickedUp = false;
+                    if (collision.gameObject.tag == "Log")
+                    {
+                        logCount++;                    
+                    }
+                    return;
+                }
             }
-        }
-        //contains definitions for the items here will work on a better way to do this 
-        //later
-        GameObject i;
 
-        if (collision.gameObject.tag == "Coconut")
-        {
-            i = Instantiate(InventoryIcon[0]);
-            i.transform.SetParent(InventoryPanel.transform);
-        }
+            //contains definitions for the items here will work on a better way to do this 
+            //later
+            GameObject i;
+         
+            if (collision.gameObject.tag == "Coconut")
+            {
+                i = Instantiate(InventoryIcon[0]);
+                i.transform.SetParent(InventoryPanel.transform);
+            }
 
-        if (collision.gameObject.tag == "Rum")
-        {
-            i = Instantiate(InventoryIcon[1]);
-            i.transform.SetParent(InventoryPanel.transform);
-        }
+            if (collision.gameObject.tag == "Rum")
+            {
+                i = Instantiate(InventoryIcon[1]);
+                i.transform.SetParent(InventoryPanel.transform);
+            }
 
-        if (collision.gameObject.tag == "BlueFruit")
-        {
-            i = Instantiate(InventoryIcon[2]);
-            i.transform.SetParent(InventoryPanel.transform);
+            if (collision.gameObject.tag == "RopeCoil")
+            {
+                i = Instantiate(InventoryIcon[2]);
+                i.transform.SetParent(InventoryPanel.transform);
+
+            }
+
+            if (collision.gameObject.tag == "Log")
+            {               
+                i = Instantiate(InventoryIcon[3]);
+                i.transform.SetParent(InventoryPanel.transform);
+                logCount = 1;
+            }
+
+            pickedUp = false;
         }
+      
     }
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    
 }

@@ -8,6 +8,9 @@ TagManager:
   - Journal
   - Coconut
   - Rum
+  - FreshWater
+  - RopeCoil
+  - Log
   layers:
   - Default
   - TransparentFX

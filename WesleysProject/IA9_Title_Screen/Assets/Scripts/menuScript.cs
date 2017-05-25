@@ -64,7 +64,14 @@ public class menuScript : MonoBehaviour {
 
     public void ExitGame()
     {
-        SceneManager.LoadScene("Title");
-        Time.timeScale = 1;
+        if (SceneManager.GetActiveScene().name == "Title")
+        {
+            Application.Quit();
+        }
+        else
+        {
+            SceneManager.LoadScene("Title");
+            Time.timeScale = 1;
+        }
     }
 }
