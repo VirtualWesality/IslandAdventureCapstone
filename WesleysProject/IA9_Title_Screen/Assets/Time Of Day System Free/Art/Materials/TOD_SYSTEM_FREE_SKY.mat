@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: TOD_SYSTEM_FREE_SKY
+  m_Shader: {fileID: 4800000, guid: cec78f25d8c98394b909eef378ec15e3, type: 3}
+  m_ShaderKeywords: ATMOSPHERICNIGHTCOLOR HORIZONFADE MIEPHASE MOON MOONHALO NIGHT
+    NIGHTCOLOR STARS STARSNOISE STARSTWINKLE USEHORIZONFADE USEMOON USEMOONHALO USESTARS
+    _EMISSION
+  m_LightmapFlags: 1
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: <noninit>
+      second:
+        m_Texture: {fileID: 8900000, guid: 1cde0e200e792cb4491204276a656490, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: <noninit>
+      second: 0
+    - first:
+        name: _AtmosphereThickness
+      second: 1
+    - first:
+        name: _Exposure
+      second: 1.3
+    - first:
+        name: _SunSize
+      second: 0.045
+    m_Colors:
+    - first:
+        name: <noninit>
+      second: {r: 2, g: 8, b: 3.62, a: 0.54}
+    - first:
+        name: _GroundColor
+      second: {r: 0.412, g: 0.384, b: 0.365, a: 1}
+    - first:
+        name: _SkyTint
+      second: {r: 0.5, g: 0.5, b: 0.5, a: 1}
