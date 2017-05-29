@@ -346,6 +346,10 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 11.08
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 16e7ae0d37eb55241810808afc3dafca, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b515e477ec2ffc84d9c9c1201f702a13, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16e7ae0d37eb55241810808afc3dafca, type: 3}
   m_IsPrefabParent: 0
@@ -777,8 +781,8 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 1
+  m_Height: 1
+  m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!1 &2086701160
