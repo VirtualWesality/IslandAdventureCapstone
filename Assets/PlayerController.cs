@@ -6,7 +6,9 @@ public class PlayerController : MonoBehaviour {
 
     //PlayerController.cs Made by Conner Lindsley
     // for the Spring 2017 Capstone Game Project.
-    
+
+    public Transform camera; //Reference to the main camera, so I can get it's direction values.
+
     //Motor control settings, make a private class?
     private Quaternion targetRotation; //Rotation angle that holds the end target for the rotation.
     private Rigidbody rBody; //Reference to the rigidbody of the character.
@@ -52,7 +54,7 @@ public class PlayerController : MonoBehaviour {
 	
     void GetInput()
     {
-        forwardInp = Input.GetAxis("Vertical");
+        forwardInp = Input.GetAxis("Vertical") + Input.GetAxis("Horizontal");
         turnInp = Input.GetAxis("Horizontal");
     }
 
@@ -73,7 +75,7 @@ public class PlayerController : MonoBehaviour {
         if (Mathf.Abs(forwardInp) > settings.inputDelay)
         {
             //Move
-            rBody.velocity = transform.forward * forwardInp * settings.forwardVel; //forwardInp can be positive or negative, which is why we need the absolute value.
+            rBody.velocity = camera.forward * forwardInp * settings.forwardVel; //forwardInp can be positive or negative, which is why we need the absolute value.
         }
         else
             //zero velocity

@@ -12,13 +12,27 @@ public class CameraController : MonoBehaviour {
     [System.Serializable]
     public class PositionSettings //Class that holds basic info for the camera's position in 3d space relative to it's target.
     {
-        public Vector3 targetPosOffset = new Vector3(0, .5f, 0); //Changing the origin of the character, so we don't look at it's feet.
+        public Vector3 targetPosOffset = new Vector3(0, 2f, 0); //Changing the origin of the character, so we don't look at it's feet.
         public float lookSmooth = 100f; //Used to smooth the movement of the camera.
         public float distanceFromTarget = -8; //Starting distance from camera target. Modified by maxZoom and minZoom.
         public float zoomSmooth = 100; //Used to smooth the zoom, so we don't all throw up.
         public float maxZoom = -2; //These modify distanceFromTarget to make the camera zoom in or out.
         public float minZoom = -15;
     }
+
+    [System.Serializable]
+    public class LockOnSettings //Class that holds the info and settings for the lock on system.
+    {
+        public Vector3 lockPosOffset = new Vector3(0, 0, 0); //Vector that changes the location of the camera, relative to the two targets.
+        public Transform enemyTarget; //Container for the enemy's transform when you grab it from the lock on.
+    }
+
+    /* The plan is to have a vector3 between the player and target, move the camera to an offset positon that can view both target and player, and have the camera focus on the mid point
+    between the two targets. Depending on where they are realative to each other, position will flip to match. (Default, Player on left, enemy on right.)
+
+    Need to raycast or linecast (probably linecast, if it gives a vector) for available enemies relative to the camera's looking direction and distance from the player. Making the lock
+    break if the target gets too far away.
+    */
 
     [System.Serializable]
     public class OrbitSettings //Class that holds the orbit and rotation setting for the camera, relative to the target.
@@ -38,11 +52,13 @@ public class CameraController : MonoBehaviour {
         public string ORBIT_HORIZONTAL = "OrbitHorizontal";
         public string ORBIT_VERTICAL = "OrbitVertical";
         public string ZOOM = "Mouse Scrollwheel";
+        public string LOCK_ON = "Fire2";
     }
 
     public PositionSettings position = new PositionSettings();
     public OrbitSettings orbit = new OrbitSettings();
     public InputSettings input = new InputSettings();
+    public LockOnSettings lockOn = new LockOnSettings();
 
     private Vector3 targetPos = Vector3.zero; //Initialization of our vectors that track the camera's target, and the destination of the camera as it moves.
     private Vector3 destination = Vector3.zero;
@@ -111,6 +127,11 @@ public class CameraController : MonoBehaviour {
     {
         Quaternion targetRotation = Quaternion.LookRotation(targetPos - transform.position);
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, position.lookSmooth * Time.deltaTime);
+    }
+
+    void LockOnTarget()
+    {
+
     }
 
     void OrbitTarget() //Function that handles the actual orbiting of the camera around the player
