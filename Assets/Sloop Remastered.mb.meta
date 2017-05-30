@@ -1,0 +1,622 @@
+fileFormatVersion: 2
+guid: 9d45f1c456d550f4083b51e0b5a29259
+timeCreated: 1495494303
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: ambientLight1
+    100002: Anchor
+    100004: Anchor1
+    100006: Anchorhook
+    100008: Anchorhook 1
+    100010: AnchorShaft
+    100012: AnchorShaft 1
+    100014: Boom
+    100016: BowSpirit
+    100018: BowSpirit1
+    100020: Cabin
+    100022: Cannon
+    100024: Cannon 1
+    100026: Cannon 2
+    100028: Cannon 3
+    100030: Cannon_Window
+    100032: Cannon_Window1
+    100034: Cannon_Window2
+    100036: Cannon_Window3
+    100038: dynamicConstraint1
+    100040: dynamicConstraint2
+    100042: dynamicConstraint3
+    100044: dynamicConstraint4
+    100046: dynamicConstraint5
+    100048: dynamicConstraint6
+    100050: dynamicConstraint7
+    100052: dynamicConstraint8
+    100054: Flying_Jib
+    100056: ForeStaysail
+    100058: Gaff
+    100060: Hatch
+    100062: Hatch 1
+    100064: Hatch 2
+    100066: Hatch 3
+    100068: Jib
+    100070: MainSail
+    100072: Mainsail
+    100074: MainsailNucleus
+    100076: Mast
+    100078: nCloth1
+    100080: nCloth2
+    100082: nCloth3
+    100084: nRigid1
+    100086: nRigid10
+    100088: nRigid11
+    100090: nRigid2
+    100092: nRigid3
+    100094: nRigid4
+    100096: nRigid5
+    100098: nRigid6
+    100100: nRigid7
+    100102: nRigid8
+    100104: nRigid9
+    100106: pTorus1
+    100108: pTorus1 1
+    100110: Rail
+    100112: Rail1
+    100114: Railing
+    100116: Railing1
+    100118: Railing1 1
+    100120: Railing10
+    100122: Railing11
+    100124: Railing12
+    100126: Railing13
+    100128: Railing14
+    100130: Railing15
+    100132: Railing16
+    100134: Railing2
+    100136: Railing2 1
+    100138: Railing3
+    100140: Railing3 1
+    100142: Railing4
+    100144: Railing4 1
+    100146: Railing5
+    100148: Railing5 1
+    100150: Railing6
+    100152: Railing6 1
+    100154: Railing7
+    100156: Railing7 1
+    100158: Railing8
+    100160: Railing8 1
+    100162: Railing9
+    100164: Railing9 1
+    100166: Rope
+    100168: Rope1
+    100170: Rope10
+    100172: Rope11
+    100174: Rope12
+    100176: Rope2
+    100178: Rope3
+    100180: Rope4
+    100182: Rope5
+    100184: Rope6
+    100186: Rope7
+    100188: Rope8
+    100190: Rope9
+    100192: Rudder
+    100194: //RootNode
+    100196: Stair
+    100198: Stair 1
+    100200: Stair1
+    100202: Stair1 1
+    100204: Stair2
+    100206: Stair2 1
+    100208: Stair3
+    100210: Stair3 1
+    100212: Stair4
+    100214: Stair4 1
+    100216: Stairsupport
+    100218: Stairsupport1
+    100220: Support
+    100222: Support 1
+    100224: Support 2
+    100226: Support 3
+    100228: Support1
+    100230: Support1 1
+    100232: Support1 2
+    100234: Support1 3
+    100236: Wheel_Circle
+    100238: Wheel_Handle1
+    100240: Wheel_Handle2
+    100242: Wheel_Handle3
+    100244: Wheel_Handle4
+    100246: Wheel_Hub
+    100248: WheelBase
+    400000: ambientLight1
+    400002: Anchor
+    400004: Anchor1
+    400006: Anchorhook
+    400008: Anchorhook 1
+    400010: AnchorShaft
+    400012: AnchorShaft 1
+    400014: Boom
+    400016: BowSpirit
+    400018: BowSpirit1
+    400020: Cabin
+    400022: Cannon
+    400024: Cannon 1
+    400026: Cannon 2
+    400028: Cannon 3
+    400030: Cannon_Window
+    400032: Cannon_Window1
+    400034: Cannon_Window2
+    400036: Cannon_Window3
+    400038: dynamicConstraint1
+    400040: dynamicConstraint2
+    400042: dynamicConstraint3
+    400044: dynamicConstraint4
+    400046: dynamicConstraint5
+    400048: dynamicConstraint6
+    400050: dynamicConstraint7
+    400052: dynamicConstraint8
+    400054: Flying_Jib
+    400056: ForeStaysail
+    400058: Gaff
+    400060: Hatch
+    400062: Hatch 1
+    400064: Hatch 2
+    400066: Hatch 3
+    400068: Jib
+    400070: MainSail
+    400072: Mainsail
+    400074: MainsailNucleus
+    400076: Mast
+    400078: nCloth1
+    400080: nCloth2
+    400082: nCloth3
+    400084: nRigid1
+    400086: nRigid10
+    400088: nRigid11
+    400090: nRigid2
+    400092: nRigid3
+    400094: nRigid4
+    400096: nRigid5
+    400098: nRigid6
+    400100: nRigid7
+    400102: nRigid8
+    400104: nRigid9
+    400106: pTorus1
+    400108: pTorus1 1
+    400110: Rail
+    400112: Rail1
+    400114: Railing
+    400116: Railing1
+    400118: Railing1 1
+    400120: Railing10
+    400122: Railing11
+    400124: Railing12
+    400126: Railing13
+    400128: Railing14
+    400130: Railing15
+    400132: Railing16
+    400134: Railing2
+    400136: Railing2 1
+    400138: Railing3
+    400140: Railing3 1
+    400142: Railing4
+    400144: Railing4 1
+    400146: Railing5
+    400148: Railing5 1
+    400150: Railing6
+    400152: Railing6 1
+    400154: Railing7
+    400156: Railing7 1
+    400158: Railing8
+    400160: Railing8 1
+    400162: Railing9
+    400164: Railing9 1
+    400166: Rope
+    400168: Rope1
+    400170: Rope10
+    400172: Rope11
+    400174: Rope12
+    400176: Rope2
+    400178: Rope3
+    400180: Rope4
+    400182: Rope5
+    400184: Rope6
+    400186: Rope7
+    400188: Rope8
+    400190: Rope9
+    400192: Rudder
+    400194: //RootNode
+    400196: Stair
+    400198: Stair 1
+    400200: Stair1
+    400202: Stair1 1
+    400204: Stair2
+    400206: Stair2 1
+    400208: Stair3
+    400210: Stair3 1
+    400212: Stair4
+    400214: Stair4 1
+    400216: Stairsupport
+    400218: Stairsupport1
+    400220: Support
+    400222: Support 1
+    400224: Support 2
+    400226: Support 3
+    400228: Support1
+    400230: Support1 1
+    400232: Support1 2
+    400234: Support1 3
+    400236: Wheel_Circle
+    400238: Wheel_Handle1
+    400240: Wheel_Handle2
+    400242: Wheel_Handle3
+    400244: Wheel_Handle4
+    400246: Wheel_Hub
+    400248: WheelBase
+    2300000: Anchor
+    2300002: Anchor1
+    2300004: Anchorhook
+    2300006: Anchorhook 1
+    2300008: AnchorShaft
+    2300010: AnchorShaft 1
+    2300012: Boom
+    2300014: BowSpirit
+    2300016: BowSpirit1
+    2300018: Cabin
+    2300020: Cannon
+    2300022: Cannon 1
+    2300024: Cannon 2
+    2300026: Cannon 3
+    2300028: Cannon_Window
+    2300030: Cannon_Window1
+    2300032: Cannon_Window2
+    2300034: Cannon_Window3
+    2300036: Flying_Jib
+    2300038: ForeStaysail
+    2300040: Gaff
+    2300042: Hatch
+    2300044: Hatch 1
+    2300046: Hatch 2
+    2300048: Hatch 3
+    2300050: Jib
+    2300052: Mainsail
+    2300054: Mast
+    2300056: pTorus1
+    2300058: pTorus1 1
+    2300060: Rail
+    2300062: Rail1
+    2300064: Railing
+    2300066: Railing1
+    2300068: Railing1 1
+    2300070: Railing10
+    2300072: Railing11
+    2300074: Railing12
+    2300076: Railing13
+    2300078: Railing14
+    2300080: Railing15
+    2300082: Railing16
+    2300084: Railing2
+    2300086: Railing2 1
+    2300088: Railing3
+    2300090: Railing3 1
+    2300092: Railing4
+    2300094: Railing4 1
+    2300096: Railing5
+    2300098: Railing5 1
+    2300100: Railing6
+    2300102: Railing6 1
+    2300104: Railing7
+    2300106: Railing7 1
+    2300108: Railing8
+    2300110: Railing8 1
+    2300112: Railing9
+    2300114: Railing9 1
+    2300116: Rope
+    2300118: Rope1
+    2300120: Rope10
+    2300122: Rope11
+    2300124: Rope12
+    2300126: Rope2
+    2300128: Rope3
+    2300130: Rope4
+    2300132: Rope5
+    2300134: Rope6
+    2300136: Rope7
+    2300138: Rope8
+    2300140: Rope9
+    2300142: Rudder
+    2300144: //RootNode
+    2300146: Stair
+    2300148: Stair 1
+    2300150: Stair1
+    2300152: Stair1 1
+    2300154: Stair2
+    2300156: Stair2 1
+    2300158: Stair3
+    2300160: Stair3 1
+    2300162: Stair4
+    2300164: Stair4 1
+    2300166: Stairsupport
+    2300168: Stairsupport1
+    2300170: Support
+    2300172: Support 1
+    2300174: Support 2
+    2300176: Support 3
+    2300178: Support1
+    2300180: Support1 1
+    2300182: Support1 2
+    2300184: Support1 3
+    2300186: Wheel_Circle
+    2300188: Wheel_Handle1
+    2300190: Wheel_Handle2
+    2300192: Wheel_Handle3
+    2300194: Wheel_Handle4
+    2300196: Wheel_Hub
+    2300198: WheelBase
+    3300000: Anchor
+    3300002: Anchor1
+    3300004: Anchorhook
+    3300006: Anchorhook 1
+    3300008: AnchorShaft
+    3300010: AnchorShaft 1
+    3300012: Boom
+    3300014: BowSpirit
+    3300016: BowSpirit1
+    3300018: Cabin
+    3300020: Cannon
+    3300022: Cannon 1
+    3300024: Cannon 2
+    3300026: Cannon 3
+    3300028: Cannon_Window
+    3300030: Cannon_Window1
+    3300032: Cannon_Window2
+    3300034: Cannon_Window3
+    3300036: Flying_Jib
+    3300038: ForeStaysail
+    3300040: Gaff
+    3300042: Hatch
+    3300044: Hatch 1
+    3300046: Hatch 2
+    3300048: Hatch 3
+    3300050: Jib
+    3300052: Mainsail
+    3300054: Mast
+    3300056: pTorus1
+    3300058: pTorus1 1
+    3300060: Rail
+    3300062: Rail1
+    3300064: Railing
+    3300066: Railing1
+    3300068: Railing1 1
+    3300070: Railing10
+    3300072: Railing11
+    3300074: Railing12
+    3300076: Railing13
+    3300078: Railing14
+    3300080: Railing15
+    3300082: Railing16
+    3300084: Railing2
+    3300086: Railing2 1
+    3300088: Railing3
+    3300090: Railing3 1
+    3300092: Railing4
+    3300094: Railing4 1
+    3300096: Railing5
+    3300098: Railing5 1
+    3300100: Railing6
+    3300102: Railing6 1
+    3300104: Railing7
+    3300106: Railing7 1
+    3300108: Railing8
+    3300110: Railing8 1
+    3300112: Railing9
+    3300114: Railing9 1
+    3300116: Rope
+    3300118: Rope1
+    3300120: Rope10
+    3300122: Rope11
+    3300124: Rope12
+    3300126: Rope2
+    3300128: Rope3
+    3300130: Rope4
+    3300132: Rope5
+    3300134: Rope6
+    3300136: Rope7
+    3300138: Rope8
+    3300140: Rope9
+    3300142: Rudder
+    3300144: //RootNode
+    3300146: Stair
+    3300148: Stair 1
+    3300150: Stair1
+    3300152: Stair1 1
+    3300154: Stair2
+    3300156: Stair2 1
+    3300158: Stair3
+    3300160: Stair3 1
+    3300162: Stair4
+    3300164: Stair4 1
+    3300166: Stairsupport
+    3300168: Stairsupport1
+    3300170: Support
+    3300172: Support 1
+    3300174: Support 2
+    3300176: Support 3
+    3300178: Support1
+    3300180: Support1 1
+    3300182: Support1 2
+    3300184: Support1 3
+    3300186: Wheel_Circle
+    3300188: Wheel_Handle1
+    3300190: Wheel_Handle2
+    3300192: Wheel_Handle3
+    3300194: Wheel_Handle4
+    3300196: Wheel_Hub
+    3300198: WheelBase
+    4300000: Hull
+    4300002: Rudder
+    4300004: WheelBase
+    4300006: Wheel_Hub
+    4300008: Wheel_Circle
+    4300010: Wheel_Handle1
+    4300012: Wheel_Handle3
+    4300014: Wheel_Handle2
+    4300016: Wheel_Handle4
+    4300018: Cabin
+    4300020: Railing
+    4300022: Railing1
+    4300024: Railing2
+    4300026: Railing3
+    4300028: Railing4
+    4300030: Railing5
+    4300032: Railing6
+    4300034: Railing7
+    4300036: Railing8
+    4300038: Railing9
+    4300040: Railing11
+    4300042: Railing12
+    4300044: Railing13
+    4300046: Railing14
+    4300048: Railing15
+    4300050: Railing16
+    4300052: Rail
+    4300054: Railing10
+    4300056: Railing1
+    4300058: Railing2
+    4300060: Railing3
+    4300062: Railing4
+    4300064: Railing5
+    4300066: Railing6
+    4300068: Railing7
+    4300070: Railing8
+    4300072: Railing9
+    4300074: Rail1
+    4300076: Stairsupport
+    4300078: Stair
+    4300080: Stair1
+    4300082: Stair2
+    4300084: Stair3
+    4300086: Stair4
+    4300088: Stairsupport1
+    4300090: Stair
+    4300092: Stair1
+    4300094: Stair2
+    4300096: Stair3
+    4300098: Stair4
+    4300100: Mast
+    4300102: Gaff
+    4300104: Boom
+    4300106: Mainsail
+    4300108: Rope3
+    4300110: ForeStaysail
+    4300112: Rope
+    4300114: Rope1
+    4300116: Rope2
+    4300118: Jib
+    4300120: Flying_Jib
+    4300122: Rope4
+    4300124: Rope5
+    4300126: Rope6
+    4300128: Rope7
+    4300130: Rope8
+    4300132: Rope9
+    4300134: Rope12
+    4300136: Rope11
+    4300138: Rope10
+    4300140: BowSpirit1
+    4300142: BowSpirit
+    4300144: Anchor
+    4300146: AnchorShaft
+    4300148: Anchorhook
+    4300150: pTorus1
+    4300152: Anchor1
+    4300154: AnchorShaft
+    4300156: Anchorhook
+    4300158: pTorus1
+    4300160: Cannon_Window
+    4300162: Support
+    4300164: Support1
+    4300166: Hatch
+    4300168: Cannon
+    4300170: Cannon_Window1
+    4300172: Support
+    4300174: Support1
+    4300176: Hatch
+    4300178: Cannon
+    4300180: Cannon_Window2
+    4300182: Support
+    4300184: Support1
+    4300186: Hatch
+    4300188: Cannon
+    4300190: Cannon_Window3
+    4300192: Support
+    4300194: Support1
+    4300196: Hatch
+    4300198: Cannon
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

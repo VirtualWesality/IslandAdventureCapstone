@@ -169,5 +169,26 @@ public class CameraController : MonoBehaviour {
             position.distanceFromTarget = position.minZoom;
         }
     }
+
+    GameObject FindClosestEnemy()
+    {
+        GameObject[] g;
+        g = GameObject.FindGameObjectsWithTag("Enemy");
+        GameObject closest = null;
+        float dis = Mathf.Infinity;
+        Vector3 pos = transform.position;
+        foreach (GameObject go in g)
+        {
+            Vector3 diff = go.transform.position - pos;
+            float curDistance = diff.sqrMagnitude;
+            if (curDistance < dis)
+            {
+                closest = go;
+                dis = curDistance;
+            }
+        }
+        return closest;
+        
+    }
 }
  

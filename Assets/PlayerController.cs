@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour {
 	void Update ()
     {
         GetInput();
-        Turn();
+        //Turn();
 	}
 
     private void FixedUpdate()

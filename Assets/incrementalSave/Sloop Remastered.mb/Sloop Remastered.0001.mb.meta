@@ -1,0 +1,524 @@
+fileFormatVersion: 2
+guid: afec86c8e493c6c48960c9aad3e34225
+timeCreated: 1495494306
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: ambientLight1
+    100002: Anchor
+    100004: Anchor1
+    100006: Anchorhook
+    100008: Anchorhook 1
+    100010: AnchorShaft
+    100012: AnchorShaft 1
+    100014: Boom
+    100016: BowSpirit
+    100018: BowSpirit1
+    100020: Cabin
+    100022: dynamicConstraint1
+    100024: dynamicConstraint2
+    100026: dynamicConstraint3
+    100028: dynamicConstraint4
+    100030: dynamicConstraint5
+    100032: dynamicConstraint6
+    100034: dynamicConstraint7
+    100036: dynamicConstraint8
+    100038: Flying_Jib
+    100040: ForeStaysail
+    100042: Gaff
+    100044: Hull
+    100046: Jib
+    100048: MainSail
+    100050: Mainsail
+    100052: MainsailNucleus
+    100054: Mast
+    100056: nCloth1
+    100058: nCloth2
+    100060: nCloth3
+    100062: nRigid1
+    100064: nRigid10
+    100066: nRigid11
+    100068: nRigid2
+    100070: nRigid3
+    100072: nRigid4
+    100074: nRigid5
+    100076: nRigid6
+    100078: nRigid7
+    100080: nRigid8
+    100082: nRigid9
+    100084: pTorus1
+    100086: pTorus1 1
+    100088: Rail
+    100090: Rail1
+    100092: Railing
+    100094: Railing1
+    100096: Railing1 1
+    100098: Railing10
+    100100: Railing11
+    100102: Railing12
+    100104: Railing13
+    100106: Railing14
+    100108: Railing15
+    100110: Railing16
+    100112: Railing2
+    100114: Railing2 1
+    100116: Railing3
+    100118: Railing3 1
+    100120: Railing4
+    100122: Railing4 1
+    100124: Railing5
+    100126: Railing5 1
+    100128: Railing6
+    100130: Railing6 1
+    100132: Railing7
+    100134: Railing7 1
+    100136: Railing8
+    100138: Railing8 1
+    100140: Railing9
+    100142: Railing9 1
+    100144: Rope
+    100146: Rope1
+    100148: Rope10
+    100150: Rope11
+    100152: Rope12
+    100154: Rope2
+    100156: Rope3
+    100158: Rope4
+    100160: Rope5
+    100162: Rope6
+    100164: Rope7
+    100166: Rope8
+    100168: Rope9
+    100170: Rudder
+    100172: //RootNode
+    100174: Stair
+    100176: Stair 1
+    100178: Stair1
+    100180: Stair1 1
+    100182: Stair2
+    100184: Stair2 1
+    100186: Stair3
+    100188: Stair3 1
+    100190: Stair4
+    100192: Stair4 1
+    100194: Stairsupport
+    100196: Stairsupport1
+    100198: Wheel_Circle
+    100200: Wheel_Handle1
+    100202: Wheel_Handle2
+    100204: Wheel_Handle3
+    100206: Wheel_Handle4
+    100208: Wheel_Hub
+    100210: WheelBase
+    400000: ambientLight1
+    400002: Anchor
+    400004: Anchor1
+    400006: Anchorhook
+    400008: Anchorhook 1
+    400010: AnchorShaft
+    400012: AnchorShaft 1
+    400014: Boom
+    400016: BowSpirit
+    400018: BowSpirit1
+    400020: Cabin
+    400022: dynamicConstraint1
+    400024: dynamicConstraint2
+    400026: dynamicConstraint3
+    400028: dynamicConstraint4
+    400030: dynamicConstraint5
+    400032: dynamicConstraint6
+    400034: dynamicConstraint7
+    400036: dynamicConstraint8
+    400038: Flying_Jib
+    400040: ForeStaysail
+    400042: Gaff
+    400044: Hull
+    400046: Jib
+    400048: MainSail
+    400050: Mainsail
+    400052: MainsailNucleus
+    400054: Mast
+    400056: nCloth1
+    400058: nCloth2
+    400060: nCloth3
+    400062: nRigid1
+    400064: nRigid10
+    400066: nRigid11
+    400068: nRigid2
+    400070: nRigid3
+    400072: nRigid4
+    400074: nRigid5
+    400076: nRigid6
+    400078: nRigid7
+    400080: nRigid8
+    400082: nRigid9
+    400084: pTorus1
+    400086: pTorus1 1
+    400088: Rail
+    400090: Rail1
+    400092: Railing
+    400094: Railing1
+    400096: Railing1 1
+    400098: Railing10
+    400100: Railing11
+    400102: Railing12
+    400104: Railing13
+    400106: Railing14
+    400108: Railing15
+    400110: Railing16
+    400112: Railing2
+    400114: Railing2 1
+    400116: Railing3
+    400118: Railing3 1
+    400120: Railing4
+    400122: Railing4 1
+    400124: Railing5
+    400126: Railing5 1
+    400128: Railing6
+    400130: Railing6 1
+    400132: Railing7
+    400134: Railing7 1
+    400136: Railing8
+    400138: Railing8 1
+    400140: Railing9
+    400142: Railing9 1
+    400144: Rope
+    400146: Rope1
+    400148: Rope10
+    400150: Rope11
+    400152: Rope12
+    400154: Rope2
+    400156: Rope3
+    400158: Rope4
+    400160: Rope5
+    400162: Rope6
+    400164: Rope7
+    400166: Rope8
+    400168: Rope9
+    400170: Rudder
+    400172: //RootNode
+    400174: Stair
+    400176: Stair 1
+    400178: Stair1
+    400180: Stair1 1
+    400182: Stair2
+    400184: Stair2 1
+    400186: Stair3
+    400188: Stair3 1
+    400190: Stair4
+    400192: Stair4 1
+    400194: Stairsupport
+    400196: Stairsupport1
+    400198: Wheel_Circle
+    400200: Wheel_Handle1
+    400202: Wheel_Handle2
+    400204: Wheel_Handle3
+    400206: Wheel_Handle4
+    400208: Wheel_Hub
+    400210: WheelBase
+    2300000: Anchor
+    2300002: Anchor1
+    2300004: Anchorhook
+    2300006: Anchorhook 1
+    2300008: AnchorShaft
+    2300010: AnchorShaft 1
+    2300012: Boom
+    2300014: BowSpirit
+    2300016: BowSpirit1
+    2300018: Cabin
+    2300020: Flying_Jib
+    2300022: ForeStaysail
+    2300024: Gaff
+    2300026: Hull
+    2300028: Jib
+    2300030: Mainsail
+    2300032: Mast
+    2300034: pTorus1
+    2300036: pTorus1 1
+    2300038: Rail
+    2300040: Rail1
+    2300042: Railing
+    2300044: Railing1
+    2300046: Railing1 1
+    2300048: Railing10
+    2300050: Railing11
+    2300052: Railing12
+    2300054: Railing13
+    2300056: Railing14
+    2300058: Railing15
+    2300060: Railing16
+    2300062: Railing2
+    2300064: Railing2 1
+    2300066: Railing3
+    2300068: Railing3 1
+    2300070: Railing4
+    2300072: Railing4 1
+    2300074: Railing5
+    2300076: Railing5 1
+    2300078: Railing6
+    2300080: Railing6 1
+    2300082: Railing7
+    2300084: Railing7 1
+    2300086: Railing8
+    2300088: Railing8 1
+    2300090: Railing9
+    2300092: Railing9 1
+    2300094: Rope
+    2300096: Rope1
+    2300098: Rope10
+    2300100: Rope11
+    2300102: Rope12
+    2300104: Rope2
+    2300106: Rope3
+    2300108: Rope4
+    2300110: Rope5
+    2300112: Rope6
+    2300114: Rope7
+    2300116: Rope8
+    2300118: Rope9
+    2300120: Rudder
+    2300122: Stair
+    2300124: Stair 1
+    2300126: Stair1
+    2300128: Stair1 1
+    2300130: Stair2
+    2300132: Stair2 1
+    2300134: Stair3
+    2300136: Stair3 1
+    2300138: Stair4
+    2300140: Stair4 1
+    2300142: Stairsupport
+    2300144: Stairsupport1
+    2300146: Wheel_Circle
+    2300148: Wheel_Handle1
+    2300150: Wheel_Handle2
+    2300152: Wheel_Handle3
+    2300154: Wheel_Handle4
+    2300156: Wheel_Hub
+    2300158: WheelBase
+    3300000: Anchor
+    3300002: Anchor1
+    3300004: Anchorhook
+    3300006: Anchorhook 1
+    3300008: AnchorShaft
+    3300010: AnchorShaft 1
+    3300012: Boom
+    3300014: BowSpirit
+    3300016: BowSpirit1
+    3300018: Cabin
+    3300020: Flying_Jib
+    3300022: ForeStaysail
+    3300024: Gaff
+    3300026: Hull
+    3300028: Jib
+    3300030: Mainsail
+    3300032: Mast
+    3300034: pTorus1
+    3300036: pTorus1 1
+    3300038: Rail
+    3300040: Rail1
+    3300042: Railing
+    3300044: Railing1
+    3300046: Railing1 1
+    3300048: Railing10
+    3300050: Railing11
+    3300052: Railing12
+    3300054: Railing13
+    3300056: Railing14
+    3300058: Railing15
+    3300060: Railing16
+    3300062: Railing2
+    3300064: Railing2 1
+    3300066: Railing3
+    3300068: Railing3 1
+    3300070: Railing4
+    3300072: Railing4 1
+    3300074: Railing5
+    3300076: Railing5 1
+    3300078: Railing6
+    3300080: Railing6 1
+    3300082: Railing7
+    3300084: Railing7 1
+    3300086: Railing8
+    3300088: Railing8 1
+    3300090: Railing9
+    3300092: Railing9 1
+    3300094: Rope
+    3300096: Rope1
+    3300098: Rope10
+    3300100: Rope11
+    3300102: Rope12
+    3300104: Rope2
+    3300106: Rope3
+    3300108: Rope4
+    3300110: Rope5
+    3300112: Rope6
+    3300114: Rope7
+    3300116: Rope8
+    3300118: Rope9
+    3300120: Rudder
+    3300122: Stair
+    3300124: Stair 1
+    3300126: Stair1
+    3300128: Stair1 1
+    3300130: Stair2
+    3300132: Stair2 1
+    3300134: Stair3
+    3300136: Stair3 1
+    3300138: Stair4
+    3300140: Stair4 1
+    3300142: Stairsupport
+    3300144: Stairsupport1
+    3300146: Wheel_Circle
+    3300148: Wheel_Handle1
+    3300150: Wheel_Handle2
+    3300152: Wheel_Handle3
+    3300154: Wheel_Handle4
+    3300156: Wheel_Hub
+    3300158: WheelBase
+    4300000: Hull
+    4300002: Rudder
+    4300004: WheelBase
+    4300006: Wheel_Hub
+    4300008: Wheel_Circle
+    4300010: Wheel_Handle1
+    4300012: Wheel_Handle3
+    4300014: Wheel_Handle2
+    4300016: Wheel_Handle4
+    4300018: Cabin
+    4300020: Railing
+    4300022: Railing1
+    4300024: Railing2
+    4300026: Railing3
+    4300028: Railing4
+    4300030: Railing5
+    4300032: Railing6
+    4300034: Railing7
+    4300036: Railing8
+    4300038: Railing9
+    4300040: Railing11
+    4300042: Railing12
+    4300044: Railing13
+    4300046: Railing14
+    4300048: Railing15
+    4300050: Railing16
+    4300052: Rail
+    4300054: Railing10
+    4300056: Railing1
+    4300058: Railing2
+    4300060: Railing3
+    4300062: Railing4
+    4300064: Railing5
+    4300066: Railing6
+    4300068: Railing7
+    4300070: Railing8
+    4300072: Railing9
+    4300074: Rail1
+    4300076: Stairsupport
+    4300078: Stair
+    4300080: Stair1
+    4300082: Stair2
+    4300084: Stair3
+    4300086: Stair4
+    4300088: Stairsupport1
+    4300090: Stair
+    4300092: Stair1
+    4300094: Stair2
+    4300096: Stair3
+    4300098: Stair4
+    4300100: Mast
+    4300102: Gaff
+    4300104: Boom
+    4300106: Mainsail
+    4300108: Rope3
+    4300110: ForeStaysail
+    4300112: Rope
+    4300114: Rope1
+    4300116: Rope2
+    4300118: Jib
+    4300120: Flying_Jib
+    4300122: Rope4
+    4300124: Rope5
+    4300126: Rope6
+    4300128: Rope7
+    4300130: Rope8
+    4300132: Rope9
+    4300134: Rope12
+    4300136: Rope11
+    4300138: Rope10
+    4300140: BowSpirit1
+    4300142: BowSpirit
+    4300144: Anchor
+    4300146: AnchorShaft
+    4300148: Anchorhook
+    4300150: pTorus1
+    4300152: Anchor1
+    4300154: AnchorShaft
+    4300156: Anchorhook
+    4300158: pTorus1
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
