@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour {
     //PlayerController.cs Made by Conner Lindsley
     // for the Spring 2017 Capstone Game Project.
 
-    public Transform camera; //Reference to the main camera, so I can get it's direction values.
+    public Transform cameraCont; //Reference to the main camera, so I can get it's direction values.
 
     //Motor control settings, make a private class?
     private Quaternion targetRotation; //Rotation angle that holds the end target for the rotation.
@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour {
         public float inputDelay = 0.1f; //Just for the feels, adds a tiny deadzone to all inputs to normalize the feeling of them all.
         public float forwardVel = 12; //Base Velocity
         public float rotateVel = 100; //Base rotation speed
+        public Vector3 gravity = new Vector3(0, -5, 0); //Gravity vector for the player controller
     }
 
     [System.Serializable]
@@ -54,7 +55,7 @@ public class PlayerController : MonoBehaviour {
 	
     void GetInput()
     {
-        forwardInp = Input.GetAxis("Vertical") + Input.GetAxis("Horizontal");
+        forwardInp = Input.GetAxis("Vertical");
         turnInp = Input.GetAxis("Horizontal");
     }
 
@@ -62,7 +63,7 @@ public class PlayerController : MonoBehaviour {
 	void Update ()
     {
         GetInput();
-        //Turn();
+        Turn();
 	}
 
     private void FixedUpdate()
@@ -75,11 +76,12 @@ public class PlayerController : MonoBehaviour {
         if (Mathf.Abs(forwardInp) > settings.inputDelay)
         {
             //Move
-            rBody.velocity = camera.forward * forwardInp * settings.forwardVel; //forwardInp can be positive or negative, which is why we need the absolute value.
+            Vector3 camForward = new Vector3 (cameraCont.forward.x, 0, cameraCont.forward.z);
+            rBody.velocity = settings.gravity + (camForward * forwardInp * settings.forwardVel); //forwardInp can be positive or negative, which is why we need the absolute value.
         }
         else
             //zero velocity
-            rBody.velocity = Vector3.zero;
+            rBody.velocity = settings.gravity;
     }
 
     void Turn()

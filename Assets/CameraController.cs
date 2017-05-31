@@ -8,6 +8,7 @@ public class CameraController : MonoBehaviour {
     //for the Spring 2017 Capstone Game Project.
 
     public Transform target;
+    public bool lockedOn = false; //Boolean used by the character controller to tell when you're locked on to something.
 
     [System.Serializable]
     public class PositionSettings //Class that holds basic info for the camera's position in 3d space relative to it's target.
@@ -63,7 +64,8 @@ public class CameraController : MonoBehaviour {
     private Vector3 targetPos = Vector3.zero; //Initialization of our vectors that track the camera's target, and the destination of the camera as it moves.
     private Vector3 destination = Vector3.zero;
     private PlayerController charControl; //Reference to the PlayerController Script
-    float vOrbitInput, hOrbitInput, zoomInput, hOrbitSnapInput; //Floats that hold our orbit values.
+    private EnemyStats enemyStat; //Reference to EnemyStats script of the target enemy
+    float vOrbitInput, hOrbitInput, zoomInput, hOrbitSnapInput, lockOnInput; //Floats that hold our orbit values.
 
     void Start()
     {
@@ -92,12 +94,31 @@ public class CameraController : MonoBehaviour {
             Debug.LogError("Your camera needs a target!");
     }
 
+    public void SetCameraEnemyTarget(Transform t) //Function that initiates the actual changes to make the lock on work.
+    {
+        target = t;
+
+        if (target != null)
+        {
+            if (target.GetComponent<EnemyStats>())
+            {
+                enemyStat = target.GetComponent<EnemyStats>();
+                Debug.Log("Got the enemy!");
+            }
+            else
+                Debug.LogWarning("Warning: Target has no EnemyStats component!");
+        }
+        else
+            Debug.LogWarning("There is no enemy target!");
+    }
+
     void GetInput()
     {
         vOrbitInput = Input.GetAxisRaw(input.ORBIT_VERTICAL);
         hOrbitInput = Input.GetAxisRaw(input.ORBIT_HORIZONTAL);
         hOrbitSnapInput = Input.GetAxisRaw(input.ORBIT_HORIZONTAL_SNAP);
         zoomInput = Input.GetAxisRaw(input.ZOOM);
+        lockOnInput = Input.GetAxisRaw(input.LOCK_ON);
     }
 
     void LateUpdate()
@@ -113,12 +134,13 @@ public class CameraController : MonoBehaviour {
         GetInput();
         OrbitTarget();
         ZoomOnTarget();
+        LockOnTarget();
     }
 
-    void MoveToTarget()
+    void MoveToTarget() //Function that moves the camera to follow the player. WARNING: Causes the camera to rotate with the player. Need to fix that so they stay independant.
     {
-        targetPos = target.position + position.targetPosOffset;
-        destination = Quaternion.Euler(orbit.xRot, orbit.yRot + target.eulerAngles.y, 0) * -Vector3.forward * position.distanceFromTarget;
+        targetPos = target.position + position.targetPosOffset; //Target position calculated by the target(character)'s position and the offset vector.
+        destination = Quaternion.Euler(orbit.xRot, orbit.yRot + target.eulerAngles.y, 0) * -Vector3.forward * position.distanceFromTarget; 
         destination += targetPos;
         transform.position = destination;
     }
@@ -131,6 +153,24 @@ public class CameraController : MonoBehaviour {
 
     void LockOnTarget()
     {
+        GameObject enemy = FindClosestEnemy();
+        Transform enemyTrans = enemy.transform;
+        Vector3 diff = enemy.transform.position - transform.position;
+        float curDiff = Mathf.Abs(diff.magnitude);
+
+        if (Input.GetButton("Mouse 2"))
+        {
+            if (curDiff < 20f)
+            {
+                Debug.Log("Lock On " + enemy);
+                SetCameraEnemyTarget(enemyTrans);
+            }
+            else
+            {
+                Debug.Log("Returning to " + target);
+                SetCameraTarget(target);
+            }
+        }
 
     }
 
@@ -177,18 +217,22 @@ public class CameraController : MonoBehaviour {
         GameObject closest = null;
         float dis = Mathf.Infinity;
         Vector3 pos = transform.position;
+
+        Debug.Log("Starting check for ClosestEnemy");
+
         foreach (GameObject go in g)
         {
             Vector3 diff = go.transform.position - pos;
             float curDistance = diff.sqrMagnitude;
+
             if (curDistance < dis)
             {
                 closest = go;
                 dis = curDistance;
             }
         }
+        Debug.Log("Found " + closest.name);
         return closest;
-        
     }
 }
  
