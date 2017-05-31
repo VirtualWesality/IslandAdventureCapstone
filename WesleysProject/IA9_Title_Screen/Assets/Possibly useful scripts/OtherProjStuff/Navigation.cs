@@ -14,6 +14,8 @@ public class Navigation : MonoBehaviour {
 	private int nextPoint;
 	private UnityEngine.AI.NavMeshAgent navAgent;
 	GameObject Player;
+    private Animator anim;
+
 
     // Use this for initialization
     void Start () {
@@ -22,16 +24,23 @@ public class Navigation : MonoBehaviour {
 	//	navAgent.SetDestination (patrolPath [nextPoint].position);
 		isPatrolling = true;
 		Player = GameObject.FindGameObjectWithTag("Player");
+        anim = GetComponent<Animator>();
     }
 	
 	// Update is called once per frame
 	void Update () {
-			
+
+        //Animation
+        float y= navAgent.speed;
+         anim.SetFloat("Speed", y);
+
+        //End Animation
 		if (isPatrolling) {
 			fov = 60.0f;
 			if (Vector3.Distance(transform.position, playerLocation.position) < detectionRange && canSeePlayer()) 
 			{	
 				isPatrolling = false;
+                
 			}
 			else if (navAgent.remainingDistance < .8) {
 				nextPoint = (nextPoint + 1) % patrolPath.Length;
