@@ -30,6 +30,7 @@ public class Respawn : MonoBehaviour
                 this.GetComponent<SphereCollider>().enabled = false;
             }
             
+            if ((this.GetComponent<MeshRenderer>()))
             this.GetComponent<MeshRenderer>().enabled = false;
 
             if (this.gameObject.tag == "RopeCoil")
@@ -38,6 +39,11 @@ public class Respawn : MonoBehaviour
                 {
                     this.gameObject.transform.GetChild(i).GetComponent<MeshRenderer>().enabled = false;
                 }
+            }
+
+            if (this.gameObject.tag == "SailCloth")
+            {
+                this.gameObject.SetActive(false);
             }
 
             if (this.gameObject.tag == "Rum")
@@ -62,11 +68,17 @@ public class Respawn : MonoBehaviour
             this.GetComponent<SphereCollider>().enabled = true;
         }
 
-        this.GetComponent<MeshRenderer>().enabled = true;
+        if ((this.GetComponent<MeshRenderer>()))
+            this.GetComponent<MeshRenderer>().enabled = true;
 
         if (this.gameObject.tag == "Rum")
         {
             cork.GetComponent<MeshRenderer>().enabled = true;
+        }
+
+        if (this.gameObject.tag == "SailCloth")
+        {
+            this.gameObject.SetActive(true);
         }
 
     }

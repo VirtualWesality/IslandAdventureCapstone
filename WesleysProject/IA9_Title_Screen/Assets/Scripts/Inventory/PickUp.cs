@@ -30,6 +30,7 @@ public class PickUp : MonoBehaviour
     public GameObject AudioManager;
     public bool pickedUp;
     public int logCount = 0;
+    public int sailClothCount = 0;
 
     private void OnTriggerStay(Collider collision)
     {
@@ -48,6 +49,11 @@ public class PickUp : MonoBehaviour
                     if (collision.gameObject.tag == "Log")
                     {
                         logCount++;                    
+                    }
+
+                    if (collision.gameObject.tag == "SailCloth")
+                    {
+                        sailClothCount++;
                     }
                     return;
                 }
@@ -73,7 +79,6 @@ public class PickUp : MonoBehaviour
             {
                 i = Instantiate(InventoryIcon[2]);
                 i.transform.SetParent(InventoryPanel.transform);
-
             }
 
             if (collision.gameObject.tag == "Log")
@@ -81,6 +86,13 @@ public class PickUp : MonoBehaviour
                 i = Instantiate(InventoryIcon[3]);
                 i.transform.SetParent(InventoryPanel.transform);
                 logCount = 1;
+            }
+
+            if (collision.gameObject.tag == "SailCloth")
+            {
+                i = Instantiate(InventoryIcon[4]);
+                i.transform.SetParent(InventoryPanel.transform);
+                sailClothCount = 1;
             }
 
             pickedUp = false;

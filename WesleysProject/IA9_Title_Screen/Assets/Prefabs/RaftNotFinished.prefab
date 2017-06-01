@@ -98,9 +98,13 @@ MonoBehaviour:
   leaveIslandText: {fileID: 0}
   Player: {fileID: 0}
   inRaftRange: 0
+  logCount: 0
+  sailClothCount: 0
   finishedRaft: {fileID: 0}
   playerSpawn: {fileID: 0}
   movingRaftScript: {fileID: 0}
+  BookManager: {fileID: 0}
+  inventoryPanel: {fileID: 0}
 --- !u!135 &135682514410160304
 SphereCollider:
   m_ObjectHideFlags: 1

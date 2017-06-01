@@ -1373,7 +1373,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149790}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 251.85, y: 11.79, z: 239.3}
+  m_LocalPosition: {x: 257.93, y: 10.47, z: 217.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 469942}
@@ -2549,6 +2549,7 @@ SkinnedMeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   serializedVersion: 2
   m_Quality: 0
@@ -2604,6 +2605,7 @@ SkinnedMeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   serializedVersion: 2
   m_Quality: 0
@@ -2768,6 +2770,8 @@ Camera:
   m_TargetDisplay: 0
   m_TargetEye: 3
   m_HDR: 0
+  m_AllowMSAA: 1
+  m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
@@ -2803,6 +2807,7 @@ MonoBehaviour:
   - {fileID: 1377910777500618, guid: 3597dc8077795c84babbabcce33846aa, type: 2}
   - {fileID: 1544698237839826, guid: 90d8da3f962063c4b8577ce97fc40586, type: 2}
   - {fileID: 1026304846024716, guid: b8547fd31c952fd489c1f103cfa4ffbc, type: 2}
+  - {fileID: 1055245199801628, guid: 9a2ea0f26a7e43848b6491bddb4a1f5b, type: 2}
   AudioManager: {fileID: 0}
   pickedUp: 0
   logCount: 0

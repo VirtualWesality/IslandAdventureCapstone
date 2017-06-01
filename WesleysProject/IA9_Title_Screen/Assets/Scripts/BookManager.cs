@@ -11,7 +11,7 @@ public class BookManager : MonoBehaviour {
     public Button bookExit;
     public Collider bookCol;
     public Collider raftCol;
-    private bool HasJournal;
+    public bool HasJournal;
     public GameObject InventoryPanel, JournalPanel;
 
 	// Use this for initialization
