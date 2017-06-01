@@ -10,46 +10,32 @@ Material:
   m_Shader: {fileID: 4800000, guid: 6a151f652f5ba03458e9a7cd03ae88e8, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
+  disabledShaderPasses: []
   m_SavedProperties:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TexEnvs:
-    - first:
-        name: <noninit>
-      second:
+    - <noninit>:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _Distort
-      second:
+    - _Distort:
         m_Texture: {fileID: 2800000, guid: 348fa4d278c53ad4dacd07df1e63a248, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _LavaTex
-      second:
+    - _LavaTex:
         m_Texture: {fileID: 2800000, guid: 0ebfaeff4eb7328498165095f9cfc32f, type: 3}
         m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0.09149932, y: 0}
-    - first:
-        name: _MainTex
-      second:
+        m_Offset: {x: 0.9691353, y: 0}
+    - _MainTex:
         m_Texture: {fileID: 2800000, guid: 93a726948508cc14eab67fb1abe2daa8, type: 3}
         m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0.27449796, y: 0}
+        m_Offset: {x: 2.9073415, y: 0}
     m_Floats:
-    - first:
-        name: <noninit>
-      second: 0
-    - first:
-        name: _DistortX
-      second: 1
-    - first:
-        name: _DistortY
-      second: 0
+    - <noninit>: 0
+    - _DistortX: 1
+    - _DistortY: 0
     m_Colors:
-    - first:
-        name: <noninit>
-      second: {r: 0, g: 1.186982e-34, b: 0, a: 1.1869747e-34}
+    - <noninit>: {r: 0, g: 1.186982e-34, b: 0, a: 1.1869747e-34}

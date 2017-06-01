@@ -10,73 +10,47 @@ Material:
   m_Shader: {fileID: 4800000, guid: 1cac2e0bcc34e4b3cbb4bd85982eba83, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
+  disabledShaderPasses: []
   m_SavedProperties:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TexEnvs:
-    - first:
-        name: <noninit>
-      second:
+    - <noninit>:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _BumpMap
-      second:
+    - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _Fresnel
-      second:
+    - _Fresnel:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _ReflectionTex
-      second:
+    - _ReflectionTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _ReflectiveColor
-      second:
+    - _ReflectiveColor:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _RefractionTex
-      second:
+    - _RefractionTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - first:
-        name: <noninit>
-      second: 0
-    - first:
-        name: _ReflDistort
-      second: 0.44
-    - first:
-        name: _RefrDistort
-      second: 0.4
-    - first:
-        name: _WaveScale
-      second: 0.063
+    - <noninit>: 0
+    - _ReflDistort: 0.44
+    - _RefrDistort: 0.4
+    - _WaveScale: 0.063
     m_Colors:
-    - first:
-        name: <noninit>
-      second: {r: 0, g: 1.0443083e-34, b: 0, a: 1.0443009e-34}
-    - first:
-        name: WaveSpeed
-      second: {r: 19, g: 9, b: -16, a: -7}
-    - first:
-        name: _HorizonColor
-      second: {r: 0.172, g: 0.463, b: 0.435, a: 1}
-    - first:
-        name: _RefrColor
-      second: {r: 0.34, g: 0.85, b: 0.92, a: 1}
+    - <noninit>: {r: 0, g: 1.0443083e-34, b: 0, a: 1.0443009e-34}
+    - WaveSpeed: {r: 19, g: 9, b: -16, a: -7}
+    - _HorizonColor: {r: 0.172, g: 0.463, b: 0.435, a: 1}
+    - _RefrColor: {r: 0.34, g: 0.85, b: 0.92, a: 1}
 --- !u!1002 &2100001
 EditorExtensionImpl:
   serializedVersion: 6

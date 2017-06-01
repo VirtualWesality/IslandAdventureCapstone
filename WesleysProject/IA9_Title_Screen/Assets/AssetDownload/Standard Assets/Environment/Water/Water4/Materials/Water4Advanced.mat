@@ -10,109 +10,57 @@ Material:
   m_Shader: {fileID: 4800000, guid: 475c4a4e617a8401b84ca7b32c7cc460, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
+  disabledShaderPasses: []
   m_SavedProperties:
-    serializedVersion: 2
+    serializedVersion: 3
     m_TexEnvs:
-    - first:
-        name: <noninit>
-      second:
+    - <noninit>:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _BumpMap
-      second:
+    - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _MainTex
-      second:
+    - _MainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _ReflectionTex
-      second:
+    - _ReflectionTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - first:
-        name: _ShoreTex
-      second:
+    - _ShoreTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - first:
-        name: <noninit>
-      second: 0
-    - first:
-        name: _FresnelScale
-      second: 0.75
-    - first:
-        name: _GerstnerIntensity
-      second: 1
-    - first:
-        name: _Shininess
-      second: 200
+    - <noninit>: 0
+    - _FresnelScale: 0.75
+    - _GerstnerIntensity: 1
+    - _Shininess: 200
     m_Colors:
-    - first:
-        name: <noninit>
-      second: {r: 0, g: 1.0354168e-34, b: 0, a: 1.0354094e-34}
-    - first:
-        name: _AnimationDirection
-      second: {r: 1, g: 1, b: 1, a: 1}
-    - first:
-        name: _AnimationTiling
-      second: {r: 2.2, g: 2.2, b: -1.1, a: -1.1}
-    - first:
-        name: _BaseColor
-      second: {r: 0.54, g: 0.95, b: 0.99, a: 0.5}
-    - first:
-        name: _BumpDirection
-      second: {r: 1, g: 1, b: -1, a: 1}
-    - first:
-        name: _BumpTiling
-      second: {r: 1, g: 1, b: -2, a: 3}
-    - first:
-        name: _DistortParams
-      second: {r: 1, g: 1, b: 2, a: 1.15}
-    - first:
-        name: _Foam
-      second: {r: 0.1, g: 0.375, b: 0, a: 0}
-    - first:
-        name: _GAmplitude
-      second: {r: 0.3, g: 0.35, b: 0.25, a: 0.25}
-    - first:
-        name: _GDirectionAB
-      second: {r: 0.3, g: 0.85, b: 0.85, a: 0.25}
-    - first:
-        name: _GDirectionCD
-      second: {r: 0.1, g: 0.9, b: 0.5, a: 0.5}
-    - first:
-        name: _GFrequency
-      second: {r: 1.3, g: 1.35, b: 1.25, a: 1.25}
-    - first:
-        name: _GSpeed
-      second: {r: 1.2, g: 1.375, b: 1.1, a: 1.5}
-    - first:
-        name: _GSteepness
-      second: {r: 1, g: 1, b: 1, a: 1}
-    - first:
-        name: _InvFadeParemeter
-      second: {r: 0.15, g: 0.15, b: 0.5, a: 1}
-    - first:
-        name: _ReflectionColor
-      second: {r: 0.54, g: 0.95, b: 0.99, a: 0.5}
-    - first:
-        name: _SpecularColor
-      second: {r: 0.72, g: 0.72, b: 0.72, a: 1}
-    - first:
-        name: _WorldLightDir
-      second: {r: -0.030375138, g: -0.20139083, b: -0.97903997, a: 0}
+    - <noninit>: {r: 0, g: 1.0354168e-34, b: 0, a: 1.0354094e-34}
+    - _AnimationDirection: {r: 1, g: 1, b: 1, a: 1}
+    - _AnimationTiling: {r: 2.2, g: 2.2, b: -1.1, a: -1.1}
+    - _BaseColor: {r: 0.54, g: 0.95, b: 0.99, a: 0.5}
+    - _BumpDirection: {r: 1, g: 1, b: -1, a: 1}
+    - _BumpTiling: {r: 1, g: 1, b: -2, a: 3}
+    - _DistortParams: {r: 1, g: 1, b: 2, a: 1.15}
+    - _Foam: {r: 0.1, g: 0.375, b: 0, a: 0}
+    - _GAmplitude: {r: 0.3, g: 0.35, b: 0.25, a: 0.25}
+    - _GDirectionAB: {r: 0.3, g: 0.85, b: 0.85, a: 0.25}
+    - _GDirectionCD: {r: 0.1, g: 0.9, b: 0.5, a: 0.5}
+    - _GFrequency: {r: 1.3, g: 1.35, b: 1.25, a: 1.25}
+    - _GSpeed: {r: 1.2, g: 1.375, b: 1.1, a: 1.5}
+    - _GSteepness: {r: 1, g: 1, b: 1, a: 1}
+    - _InvFadeParemeter: {r: 0.15, g: 0.15, b: 0.5, a: 1}
+    - _ReflectionColor: {r: 0.54, g: 0.95, b: 0.99, a: 0.5}
+    - _SpecularColor: {r: 0.72, g: 0.72, b: 0.72, a: 1}
+    - _WorldLightDir: {r: -0.030375138, g: -0.20139083, b: -0.97903997, a: 0}
 --- !u!1002 &2100001
 EditorExtensionImpl:
   serializedVersion: 6
