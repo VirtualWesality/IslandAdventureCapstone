@@ -11,8 +11,7 @@ public class MovingRaft : MonoBehaviour
     public float speed = 2f;
     public int arraySpot = -1;
     public GameManager gmScript;
-    public GameObject ethan;
-    public GameObject Player;
+    public GameObject Player, Ethan;
     public Raft raftScript;
     
 
@@ -20,24 +19,28 @@ public class MovingRaft : MonoBehaviour
 	void Start ()
     {
         Point = gmScript.setNextSailingSpot(arraySpot);
-        Player.GetComponent<ThirdPersonUserControl>().enabled = true;
+        Player.gameObject.SetActive(false);
         raftScript.leaveIslandText.SetActive(false);
+        Ethan.SetActive(true);
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
+        //Only call this on NOT arrived
         TravelToIsland2(Point);
-        Player.transform.position = raftScript.playerSpawn.transform.position;
+        //Player.transform.position = raftScript.playerSpawn.transform.position;
     }
 
     public void TravelToIsland2(Transform currentPoint)
     {
+        
         PointPos = currentPoint.transform.position;
 
         if (!(transform.position == PointPos))
         {
             transform.position = Vector3.MoveTowards(transform.position, PointPos, speed * Time.deltaTime);
+            directionToLook(Point);
         }
         else
         {
@@ -46,9 +49,20 @@ public class MovingRaft : MonoBehaviour
 
             if (!Point)
             {
-                if (SceneManager.GetActiveScene().name == "Island1")
-                { SceneManager.LoadScene("IslandTwoElectricBoogaloo"); }
+                Player.transform.position = Ethan.transform.position;
+                Ethan.SetActive(false);
+                Player.SetActive(true);
+                Player.GetComponent<ThirdPersonUserControl>().enabled = true;
             }
+        }
+    }
+
+    public void directionToLook(Transform currentpoint)
+    {
+        if (!(transform.position == currentpoint.transform.position))
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(currentpoint.position - transform.position);
+            this.transform.rotation = Quaternion.Lerp(this.transform.rotation, targetRotation, Time.deltaTime * 1);
         }
     }
 }

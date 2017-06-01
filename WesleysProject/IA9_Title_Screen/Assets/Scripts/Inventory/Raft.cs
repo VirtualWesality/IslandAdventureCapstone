@@ -26,14 +26,17 @@ public class Raft : MonoBehaviour {
             leaveIslandText.SetActive(true);
             Time.timeScale = 0;
             Player.GetComponent<ThirdPersonUserControl>().enabled = false;
+            Player.gameObject.SetActive(false);
             GetComponent<MeshRenderer>().enabled = false;
-            
+
             //Show Raft
-            finishedRaft.GetComponent<MeshRenderer>().enabled = true;
+            finishedRaft.SetActive(true);
+            /*
             for (int i = 0; i < 5; i++)
             {
                 finishedRaft.transform.GetChild(i).GetComponent<MeshRenderer>().enabled = true;
-            }         
+            }    
+            */
         }
     }
 
@@ -50,16 +53,13 @@ public class Raft : MonoBehaviour {
         //Player.gameObject.SetActive(false);
         if (SceneManager.GetActiveScene().name == "Island1")
         {
-            Player.transform.position = playerSpawn.transform.position;
+            //Player.transform.position = playerSpawn.transform.position;
             finishedRaft.GetComponent<MovingRaft>().enabled = true;
         }
         
-        //movingRaftScript.ethan.SetActive(true);
+        movingRaftScript.Ethan.SetActive(true);
 
-        if (SceneManager.GetActiveScene().name == "IslandTwoElectricBoogaloo")
-        { SceneManager.LoadScene("island3"); }
-        else if (SceneManager.GetActiveScene().name == "island3")
-        { SceneManager.LoadScene("Title"); }
+        
         Time.timeScale = 1;
         
     }
@@ -69,6 +69,9 @@ public class Raft : MonoBehaviour {
         leaveIslandText.SetActive(false);
         Time.timeScale = 1;
         Player.GetComponent<ThirdPersonUserControl>().enabled = true;
+        Player.gameObject.SetActive(true);
+        finishedRaft.SetActive(false);
+        GetComponent<MeshRenderer>().enabled = true;
     }
 
 }

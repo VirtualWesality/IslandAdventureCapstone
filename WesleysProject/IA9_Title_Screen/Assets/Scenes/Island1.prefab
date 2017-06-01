@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4030677937526246}
   - component: {fileID: 218339837531690200}
   - component: {fileID: 154364190330163638}
+  - component: {fileID: 182742939732920244}
   m_Layer: 0
   m_Name: Island1
   m_TagString: Untagged
@@ -51,6 +52,19 @@ TerrainCollider:
   m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: 4aa9f9940d9659f4ea8cee56e01a33fe, type: 2}
   m_EnableTreeColliders: 1
+--- !u!182 &182742939732920244
+WindZone:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1488895826300482}
+  m_Enabled: 1
+  m_Mode: 0
+  m_Radius: 20
+  m_WindMain: 1
+  m_WindTurbulence: 1
+  m_WindPulseMagnitude: 0.5
+  m_WindPulseFrequency: 0.01
 --- !u!218 &218339837531690200
 Terrain:
   m_ObjectHideFlags: 1

@@ -75,6 +75,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!33 &33287459651364120
 MeshFilter:
@@ -99,6 +100,7 @@ MonoBehaviour:
   inRaftRange: 0
   finishedRaft: {fileID: 0}
   playerSpawn: {fileID: 0}
+  movingRaftScript: {fileID: 0}
 --- !u!135 &135682514410160304
 SphereCollider:
   m_ObjectHideFlags: 1
