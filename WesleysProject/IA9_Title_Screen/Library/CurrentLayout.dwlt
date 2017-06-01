@@ -65,12 +65,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
+<<<<<<< HEAD
     width: 1920
     height: 947
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 12008, y: 14042}
   vertical: 0
   controlID: 11
+=======
+    width: 1848
+    height: 931
+  m_MinSize: {x: 683, y: 492}
+  m_MaxSize: {x: 12008, y: 14042}
+  vertical: 0
+  controlID: 54
+>>>>>>> origin/master
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -87,8 +96,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 410
     height: 671
+=======
+    width: 443
+    height: 660
+>>>>>>> origin/master
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 17}
@@ -142,9 +156,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1920
     height: 997
   m_MinSize: {x: 950, y: 542}
+=======
+    width: 1848
+    height: 981
+  m_MinSize: {x: 950, y: 300}
+>>>>>>> origin/master
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -205,12 +225,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1920
     height: 947
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 12008, y: 14042}
   vertical: 1
   controlID: 12
+=======
+    width: 1848
+    height: 931
+  m_MinSize: {x: 683, y: 492}
+  m_MaxSize: {x: 12008, y: 14042}
+  vertical: 1
+  controlID: 55
+>>>>>>> origin/master
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -230,12 +259,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1920
     height: 671
   m_MinSize: {x: 683, y: 221}
   m_MaxSize: {x: 12008, y: 4021}
   vertical: 0
   controlID: 13
+=======
+    width: 1848
+    height: 660
+  m_MinSize: {x: 683, y: 221}
+  m_MaxSize: {x: 12008, y: 4021}
+  vertical: 0
+  controlID: 56
+>>>>>>> origin/master
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -252,8 +290,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 410
     y: 0
+<<<<<<< HEAD
     width: 945
     height: 671
+=======
+    width: 989
+    height: 660
+>>>>>>> origin/master
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 18}
@@ -444,10 +487,17 @@ MonoBehaviour:
   m_LastProjectPath: C:\Users\Ryan\Documents\GitHub\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen
   m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 95}
     m_SelectedIDs: 3c370000
     m_LastClickedID: 14140
     m_ExpandedIDs: 000000003c37000094380000963800000c390000de3a00001a3b0000683b0000423d0000623d0000da3d0000523e00009a3e0000c03e0000443f000090540000925400009454000000ca9a3bffffff7f
+=======
+    scrollPos: {x: 0, y: 363}
+    m_SelectedIDs: 782b0000
+    m_LastClickedID: 11128
+    m_ExpandedIDs: 00000000f82600009a2800009c280000262900008a2b0000ea2b0000602c00007e2e0000a02e00005e2f00001830000086300000b6300000723100009c4a00009e4a0000a04a000000ca9a3bffffff7f
+>>>>>>> origin/master
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -475,7 +525,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 168}
     m_SelectedIDs: 98050000
     m_LastClickedID: 1432
+<<<<<<< HEAD
     m_ExpandedIDs: 000000003c37000094380000963800000c390000de3a00001a3b0000683b0000423d0000623d0000da3d0000523e00009a3e0000c03e0000443f0000905400009254000094540000
+=======
+    m_ExpandedIDs: 00000000f82600009a2800009c280000262900008a2b0000ea2b0000602c00007e2e0000a02e00005e2f00001830000086300000b6300000723100009c4a00009e4a0000a04a0000
+>>>>>>> origin/master
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -558,9 +612,15 @@ MonoBehaviour:
     height: 650
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: 
     m_LastClickedID: 0
     m_ExpandedIDs: 52d8ffff00000000
+=======
+    m_SelectedIDs: 52340000
+    m_LastClickedID: 13394
+    m_ExpandedIDs: e4fbffff00000000
+>>>>>>> origin/master
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -642,7 +702,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.34830305, y: -0.11993594, z: 0.044962335, w: -0.9286103}
     speed: 2
+<<<<<<< HEAD
     m_Value: {x: -0.34829637, y: -0.119933635, z: 0.04496147, w: -0.9285925}
+=======
+    m_Value: {x: 0.25650963, y: 0.45469698, z: -0.13857469, w: 0.8415995}
+>>>>>>> origin/master
   m_Size:
     m_Target: 201.68864
     speed: 2
