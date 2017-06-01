@@ -18,21 +18,56 @@ public class eat : MonoBehaviour
     /// </summary>
 
 
-        //Add different eatme() funcstions for the different Items. logs may not be able to be consumed
-        //Certain objects can play a certain sound when consumed
+    //Add different eatme() funcstions for the different Items. logs may not be able to be consumed
+    //Certain objects can play a certain sound when consumed
+
 
     public void eatme()
     {
-        if (System.Int32.Parse(this.transform.Find("Text").GetComponent<Text>().text) > 1)
+        if (System.Int32.Parse(this.transform.Find("Text").GetComponent<Text>().text) > 1) // If the thing you clicked has more than 1 item
         {
-            int tcount = System.Int32.Parse(this.transform.Find("Text").GetComponent<Text>().text) - 1;
-            this.transform.Find("Text").GetComponent<Text>().text = "" + tcount;
-
+            if (gameObject.tag == "Rum" || gameObject.tag == "Coconut" || gameObject.tag == "RedMushroom" || gameObject.tag == "GreenMushroom" || gameObject.tag == "BlueMushroom")
+            {
+                Eat();
+            }
         }
-        else
+        else if (System.Int32.Parse(this.transform.Find("Text").GetComponent<Text>().text) == 1) //If you only have one left 
         {
-            Destroy(this.gameObject);
+            if (gameObject.tag == "Rum" || gameObject.tag == "Coconut" || gameObject.tag == "RedMushroom" || gameObject.tag == "GreenMushroom" || gameObject.tag == "BlueMushroom")
+            {
+                Eat();
+                Destroy(this.gameObject);
+            }
+            
         }
     }
+    public void Eat() //If it's edible, eat it, increase or decrease stats accordingly
+    {
+        if (gameObject.tag == "Rum")
+        {
+            //INCREASE THIRST VALUE
+        }
+        else if (gameObject.tag == "Coconut")
+        {
+            //INCREASE FOOD VALUE (25?)
+        }
+        else if (gameObject.tag == "RedMushroom")
+        {
+            //INCREASE HEALTH + FOOD VALUE (20?)
+        }
+        else if (gameObject.tag == "GreenMushroom")
+        {
+            //PAUSE THIRST DRAIN FOR 2(?) MINUTES
+        }
+        else if (gameObject.tag == "BlueMushroom")
+        {
+            //DECREASE PLAYER HEALTH BY 95
+        }
+        //Decrement the amount of that item in your inventory
+        int tcount = System.Int32.Parse(this.transform.Find("Text").GetComponent<Text>().text) - 1;
+        this.transform.Find("Text").GetComponent<Text>().text = "" + tcount;
+    }
+
+    
 	
 }
