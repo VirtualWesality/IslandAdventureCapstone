@@ -12,6 +12,7 @@ TagManager:
   - RopeCoil
   - Log
   - SailCloth
+  - Lava
   layers:
   - Default
   - TransparentFX
