@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour {
         {
             //Move
             Vector3 camForward = new Vector3 (cameraCont.forward.x, 0, cameraCont.forward.z);
-            rBody.velocity = settings.gravity + (camForward * forwardInp * settings.forwardVel); //forwardInp can be positive or negative, which is why we need the absolute value.
+            rBody.velocity = settings.gravity + (camForward * forwardInp * turnInp * settings.forwardVel); //forwardInp can be positive or negative, which is why we need the absolute value.
         }
         else
             //zero velocity

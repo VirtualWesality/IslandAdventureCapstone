@@ -63,6 +63,7 @@ public class CameraController : MonoBehaviour {
 
     private Vector3 targetPos = Vector3.zero; //Initialization of our vectors that track the camera's target, and the destination of the camera as it moves.
     private Vector3 destination = Vector3.zero;
+    private Vector3 enemyPos = Vector3.zero; //Initialization of the enemy position vector, used to look at the enemy.
     private PlayerController charControl; //Reference to the PlayerController Script
     private EnemyStats enemyStat; //Reference to EnemyStats script of the target enemy
     float vOrbitInput, hOrbitInput, zoomInput, hOrbitSnapInput, lockOnInput; //Floats that hold our orbit values.
@@ -126,14 +127,19 @@ public class CameraController : MonoBehaviour {
         //moving
         MoveToTarget();
         //rotating
-        LookAtTarget();
+        if (lockedOn == false)
+            LookAtTarget();
+       
     }
 
     void Update()
     {
         GetInput();
-        OrbitTarget();
-        ZoomOnTarget();
+        if(lockedOn == false)
+        {
+            OrbitTarget();
+            ZoomOnTarget();
+        }
         LockOnTarget();
     }
 
@@ -151,6 +157,14 @@ public class CameraController : MonoBehaviour {
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, position.lookSmooth * Time.deltaTime);
     }
 
+    void LookAtEnemy(Transform enemy)
+    {
+        enemyPos = enemy.position;
+
+        Quaternion enemyRotation = Quaternion.LookRotation(enemyPos - transform.position);
+        transform.rotation = Quaternion.Lerp(transform.rotation, enemyRotation, position.lookSmooth * Time.deltaTime);
+    }
+
     void LockOnTarget()
     {
         GameObject enemy = FindClosestEnemy();
@@ -158,20 +172,19 @@ public class CameraController : MonoBehaviour {
         Vector3 diff = enemy.transform.position - transform.position;
         float curDiff = Mathf.Abs(diff.magnitude);
 
-        if (Input.GetButton("Mouse 2"))
+        if (Input.GetAxisRaw("Mouse 2") > 0.1f && curDiff < 20f)
         {
-            if (curDiff < 20f)
-            {
-                Debug.Log("Lock On " + enemy);
-                SetCameraEnemyTarget(enemyTrans);
-            }
-            else
-            {
-                Debug.Log("Returning to " + target);
-                SetCameraTarget(target);
-            }
+            orbit.yRot = -180;
+            orbit.xRot = -20;
+            Debug.Log("Lock On " + enemy);
+            LookAtEnemy(enemyTrans);
+            lockedOn = true;
         }
-
+        else
+        {
+            Debug.Log("Returning to " + target);
+            lockedOn = false;
+        }
     }
 
     void OrbitTarget() //Function that handles the actual orbiting of the camera around the player
