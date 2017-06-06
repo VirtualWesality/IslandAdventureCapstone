@@ -13,6 +13,7 @@ public class MovingRaft : MonoBehaviour
     public GameManager gmScript;
     public GameObject Player, Ethan;
     public Raft raftScript;
+    public bool arrived = true;
     
 
 	// Use this for initialization
@@ -28,7 +29,12 @@ public class MovingRaft : MonoBehaviour
 	void Update ()
     {
         //Only call this on NOT arrived
-        TravelToIsland2(Point);
+        if (!arrived)
+        {
+            TravelToIsland2(Point);
+        }
+        else
+        { }              
         //Player.transform.position = raftScript.playerSpawn.transform.position;
     }
 
@@ -52,6 +58,7 @@ public class MovingRaft : MonoBehaviour
                 Player.transform.position = Ethan.transform.position;
                 Ethan.SetActive(false);
                 Player.SetActive(true);
+                arrived = true;
                 Player.GetComponent<ThirdPersonUserControl>().enabled = true;
             }
         }
