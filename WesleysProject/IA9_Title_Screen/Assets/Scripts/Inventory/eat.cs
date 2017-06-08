@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class eat : MonoBehaviour
 {
     public GameObject AudioManager;
+    public PlayerVitals VitalScript;
 
     /// <summary>
     /// Written by: Tim Allen
@@ -50,26 +51,41 @@ public class eat : MonoBehaviour
         if (gameObject.tag == "Rum")
         {
             //INCREASE THIRST VALUE
+            VitalScript.thirstSlider.value += 25;
         }
         else if (gameObject.tag == "Coconut")
         {
             //INCREASE FOOD VALUE (25?)
+            VitalScript.hungerSlider.value += 25;
         }
         else if (gameObject.tag == "RedMushroom")
         {
             //INCREASE HEALTH + FOOD VALUE (20?)
+            VitalScript.hungerSlider.value += 20;
+            VitalScript.healthSlider.value += 20;
         }
         else if (gameObject.tag == "GreenMushroom")
         {
             //PAUSE THIRST DRAIN FOR 2(?) MINUTES
+            StartCoroutine(GreenMushroomWait());
         }
         else if (gameObject.tag == "BlueMushroom")
         {
             //DECREASE PLAYER HEALTH BY 95
+            VitalScript.healthSlider.value -= 95;
         }
         //Decrement the amount of that item in your inventory
         int tcount = System.Int32.Parse(this.transform.Find("Text").GetComponent<Text>().text) - 1;
         this.transform.Find("Text").GetComponent<Text>().text = "" + tcount;
+    }
+
+    public IEnumerator GreenMushroomWait()
+    {
+        VitalScript.thirstFallRate = 500;
+        
+        yield return new WaitForSeconds(10); //Change to 120 after done testing
+        Debug.Log("Booyah");
+        VitalScript.thirstFallRate = 0.1f;
     }
 
     

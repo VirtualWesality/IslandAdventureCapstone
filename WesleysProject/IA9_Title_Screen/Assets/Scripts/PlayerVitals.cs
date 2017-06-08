@@ -7,8 +7,8 @@ public class PlayerVitals : MonoBehaviour {
 
     public Slider healthSlider, thirstSlider, hungerSlider;
     public int maxHealth, healthFallRate;
-    public int maxThirst, thirstFallRate;
-    public int maxHunger, hungerFallRate;
+    public float maxThirst, thirstFallRate;
+    public float maxHunger, hungerFallRate;
 
     private void Start()
     {
@@ -71,6 +71,19 @@ public class PlayerVitals : MonoBehaviour {
     void CharacterDeath()
     {
         //Do something death related
+    }
+
+    public void OnTriggerStay(Collider other)
+    {
+        if (other.GetComponent<Collider>().tag == "Lava")
+        {
+            healthSlider.value -= 0.5f;
+        }
+
+        if (other.GetComponent<Collider>().tag == "FreshWater")
+        {
+            thirstSlider.value += 0.5f;
+        }
     }
 
 }
