@@ -12,10 +12,11 @@ public class Raft : MonoBehaviour {
     public bool inRaftRange = false;
     public int logCount, sailClothCount;
     public GameObject finishedRaft;
-    public Transform playerSpawn;
+    public GameObject finishedRaft2;
     public MovingRaft movingRaftScript;
     public GameObject BookManager;
     public GameObject inventoryPanel;
+    public GameManager gmScript;
 
 	// Use this for initialization
 	void Start ()
@@ -25,16 +26,59 @@ public class Raft : MonoBehaviour {
 
     private void Update()
     {
+        if (Input.GetKey(KeyCode.L))
+        {
+            //if (SceneManager.GetActiveScene().name == "Island1")
+            if (gmScript.currentIsland == 1)
+            {
+                //Player.transform.position = playerSpawn.transform.position;
+                finishedRaft.GetComponent<MovingRaft>().enabled = true;
+            }
+            else if (gmScript.currentIsland == 2)
+            {
+                finishedRaft2.GetComponent<MovingRaft>().enabled = true;
+            }
+
+            Player.GetComponent<PickUp>().logCount = 0;
+            Player.GetComponent<PickUp>().sailClothCount = 0;
+
+            foreach (Transform child in inventoryPanel.transform)
+            {
+                if (child.gameObject.tag == "SailCloth" || child.gameObject.tag == "Log" || child.gameObject.tag == "RopeCoil")
+                {
+                    Destroy(child.gameObject);
+                }
+            }
+
+            if (gmScript.currentIsland == 1)
+                movingRaftScript.Ethan.SetActive(true);
+
+            if (movingRaftScript.gmScript.currentIsland > 1)
+            {
+                movingRaftScript.Point = gmScript.setNextIsland2SailingSpot(0);
+            }
+            
+            Debug.Log("Continues to be lit");
+
+            Time.timeScale = 1;
+        }
+
         if (Input.GetKey(KeyCode.R) && inRaftRange == true)
         {
             leaveIslandText.SetActive(true);
-            Time.timeScale = 0;
-            Player.GetComponent<ThirdPersonUserControl>().enabled = false;
+            Time.timeScale = 0;          
             Player.gameObject.SetActive(false);
             GetComponent<MeshRenderer>().enabled = false;
 
             //Show Raft
-            finishedRaft.SetActive(true);
+            if (gmScript.currentIsland == 1)
+            {
+                finishedRaft.SetActive(true);
+            } else if (gmScript.currentIsland == 2)
+            {
+                finishedRaft2.SetActive(true);
+                gmScript.numberOfSailingSpots = gmScript.sailingSpotsIsland2.Length;
+            }
             /*
             for (int i = 0; i < 5; i++)
             {
@@ -73,6 +117,9 @@ public class Raft : MonoBehaviour {
             finishedRaft.GetComponent<MovingRaft>().enabled = true;
         }
 
+        Player.GetComponent<PickUp>().logCount = 0;
+        Player.GetComponent<PickUp>().sailClothCount = 0;
+
         foreach (Transform child in inventoryPanel.transform)
         {
             if (child.gameObject.tag == "SailCloth" || child.gameObject.tag == "Log" || child.gameObject.tag == "RopeCoil")
@@ -81,8 +128,7 @@ public class Raft : MonoBehaviour {
             }
         }
 
-        movingRaftScript.Ethan.SetActive(true);
-        movingRaftScript.arrived = false;
+        movingRaftScript.Ethan.SetActive(true);           
       
         Time.timeScale = 1;
         

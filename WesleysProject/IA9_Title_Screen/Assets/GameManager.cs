@@ -7,11 +7,13 @@ public class GameManager : MonoBehaviour
     public Transform[] sailingSpots, sailingSpotsIsland2;
     public float numberOfSailingSpots;
     public Transform currentTransform;
+    public int currentIsland = 1;
 
 	// Use this for initialization
 	void Start ()
     {
         numberOfSailingSpots = sailingSpots.Length;
+        //Debug.Log("Sailing Spots length: "+ sailingSpots.Length);
 	}
 	
 	// Update is called once per frame
@@ -20,14 +22,30 @@ public class GameManager : MonoBehaviour
 		
 	}
 
-    public Transform setNextSailingSpot(int currentSalingSpot)
+    public Transform setNextSailingSpot(int currentSailingSpot)
     {
-        int whatIn;
 
-        if (currentSalingSpot < numberOfSailingSpots)
+        if (currentSailingSpot < numberOfSailingSpots)
         {
-            whatIn = (currentSalingSpot + 1);
-            currentTransform = sailingSpots[whatIn];
+            //Debug.Log("Current sailing spot: " + currentSailingSpot);
+            //Debug.Log("Num sailing spots: " + numberOfSailingSpots);
+            currentTransform = sailingSpots[currentSailingSpot];
+        }
+        else
+        {
+            currentTransform = null;
+        }
+
+        return currentTransform;
+    }
+
+    public Transform setNextIsland2SailingSpot(int sailSpot)
+    {
+        
+        if (sailSpot < numberOfSailingSpots)
+        {
+            
+            currentTransform = sailingSpotsIsland2[sailSpot];
         }
         else
         {

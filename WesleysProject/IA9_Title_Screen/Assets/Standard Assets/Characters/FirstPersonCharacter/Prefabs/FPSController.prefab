@@ -358,9 +358,9 @@ MonoBehaviour:
   maxHealth: 100
   healthFallRate: 0
   maxThirst: 70
-  thirstFallRate: 2
+  thirstFallRate: 1
   maxHunger: 60
-  hungerFallRate: 7
+  hungerFallRate: 2
 --- !u!114 &114647896098346508
 MonoBehaviour:
   m_ObjectHideFlags: 1
