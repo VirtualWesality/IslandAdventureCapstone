@@ -41,6 +41,10 @@ public class eat : MonoBehaviour
             
         }
     }
+
+
+    //Call Eat when you press 1-6 on relevant item
+
     public void Eat() //If it's edible, eat it, increase or decrease stats accordingly
     {
         if (gameObject.tag == "Rum")
