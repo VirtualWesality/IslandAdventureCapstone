@@ -14,19 +14,27 @@ public class Navigation : MonoBehaviour {
 	private int nextPoint;
 	private UnityEngine.AI.NavMeshAgent navAgent;
 	GameObject Player;
+    Animator anim;
 
     // Use this for initialization
     void Start () {
 		navAgent = GetComponent<UnityEngine.AI.NavMeshAgent> ();
 		nextPoint = 0;
-	//	navAgent.SetDestination (patrolPath [nextPoint].position);
 		isPatrolling = true;
 		Player = GameObject.FindGameObjectWithTag("Player");
+        //Animation stuff
+        anim = GetComponent<Animator>();
     }
 	
 	// Update is called once per frame
 	void Update () {
-			
+        //Animation
+        anim.SetFloat("Speed", navAgent.speed);
+        //End Animation
+		//Attack
+
+        //End Attack
+        //Patrolling
 		if (isPatrolling) {
 			fov = 60.0f;
 			if (Vector3.Distance(transform.position, playerLocation.position) < detectionRange && canSeePlayer()) 
@@ -50,7 +58,8 @@ public class Navigation : MonoBehaviour {
 			}
 		}
 	}
-
+    //End Patrolling This portion of the script uses pathfinding
+    //Sight
     bool canSeePlayer()
     {
         RaycastHit hit;
@@ -66,7 +75,8 @@ public class Navigation : MonoBehaviour {
         }
         return false;
     }
-
+    //End Sight This portion checks to see if you can see the player by putting out a ray and checking
+    //if the player is within the fov and the range. 
 
     /*Ray click = Camera.main.ScreenPointToRay (Input.mousePosition);
     RaycastHit hit;
