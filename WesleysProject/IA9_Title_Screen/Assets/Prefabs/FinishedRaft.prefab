@@ -3882,8 +3882,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74beca702fdf2104e8181edcc8ce8d34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
-  arraySpot: -1
+  Point: {fileID: 0}
+  speed: 100
+  arraySpot: 0
   gmScript: {fileID: 0}
   Player: {fileID: 0}
   Ethan: {fileID: 1031834064886442}
