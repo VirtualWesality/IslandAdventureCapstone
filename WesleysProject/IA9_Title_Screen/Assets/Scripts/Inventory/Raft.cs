@@ -82,6 +82,7 @@ public class Raft : MonoBehaviour {
         }
 
         movingRaftScript.Ethan.SetActive(true);
+        movingRaftScript.arrived = false;
       
         Time.timeScale = 1;
         

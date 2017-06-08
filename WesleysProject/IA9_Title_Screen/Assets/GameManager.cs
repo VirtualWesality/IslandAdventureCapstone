@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public Transform[] sailingSpots;
+    public Transform[] sailingSpots, sailingSpotsIsland2;
     public float numberOfSailingSpots;
     public Transform currentTransform;
 
