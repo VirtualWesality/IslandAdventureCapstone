@@ -7657,8 +7657,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1722978761}
-  m_LocalRotation: {x: 0.067672186, y: 0.500192, z: 0.03924847, w: -0.86237353}
-  m_LocalPosition: {x: 274.37872, y: -0.30081558, z: 210.11784}
+  m_LocalRotation: {x: -0.09000201, y: 0.47019306, z: 0.04827614, w: 0.87663424}
+  m_LocalPosition: {x: 256.9667, y: 0.68019485, z: 207.69046}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9289,7 +9289,7 @@ Prefab:
         type: 2}
       propertyPath: Player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 296280209}
     - target: {fileID: 114155709630430650, guid: e3e0e86fec333524689b31052d0b25ad,
         type: 2}
       propertyPath: finishedRaft
