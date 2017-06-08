@@ -31,6 +31,9 @@ public class PickUp : MonoBehaviour
     public bool pickedUp;
     public int logCount = 0;
     public int sailClothCount = 0;
+    public PlayerVitals vitalScript;
+    public int CocoCount, rumCount, gMushCount, bMushCount, rMushCount;  
+    
 
     private void OnTriggerStay(Collider collision)
     {
@@ -55,6 +58,31 @@ public class PickUp : MonoBehaviour
                     {
                         sailClothCount++;
                     }
+
+                    if (collision.gameObject.tag == "Coconut")
+                    {
+                        CocoCount++;
+                    }
+
+                    if (collision.gameObject.tag == "Rum")
+                    {
+                        rumCount++;
+                    }
+
+                    if (collision.gameObject.tag == "GreenMushroom")
+                    {
+                        gMushCount++;
+                    }
+
+                    if (collision.gameObject.tag == "RedMushroom")
+                    {
+                        rMushCount++;
+                    }
+
+                    if (collision.gameObject.tag == "BlueMushroom")
+                    {
+                        bMushCount++;
+                    }
                     return;
                 }
             }
@@ -66,13 +94,17 @@ public class PickUp : MonoBehaviour
             if (collision.gameObject.tag == "Coconut")
             {
                 i = Instantiate(InventoryIcon[0]);
+                i.GetComponent<eat>().VitalScript = vitalScript;
                 i.transform.SetParent(InventoryPanel.transform);
+                CocoCount = 1;
             }
 
             if (collision.gameObject.tag == "Rum")
             {
                 i = Instantiate(InventoryIcon[1]);
+                i.GetComponent<eat>().VitalScript = vitalScript;
                 i.transform.SetParent(InventoryPanel.transform);
+                rumCount = 1;
             }
 
             if (collision.gameObject.tag == "RopeCoil")
@@ -99,5 +131,39 @@ public class PickUp : MonoBehaviour
         }
       
     }
-    
+
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Alpha1))
+        {
+            if (CocoCount > 0)
+            {
+                foreach (Transform child in InventoryPanel.transform)
+                {
+                    if (child.gameObject.tag == "Coconut")
+                    {
+                       
+                        child.GetComponent<eat>().eatme();
+                    }
+                }
+            }
+        }
+
+        if (Input.GetKey(KeyCode.Alpha2))
+        {
+            if (rumCount > 0)
+            {
+                foreach (Transform child in InventoryPanel.transform)
+                {
+                    if (child.gameObject.tag == "Rum")
+                    {
+
+                        child.GetComponent<eat>().eatme();
+                    }
+                }
+            }
+        }
+    }
+
+
 }

@@ -17,6 +17,7 @@ public class Respawn : MonoBehaviour
     public GameObject cork;
     public int respawnTime = 5;
     public PickUp pickUpScript;
+    public PlayerVitals playVit;
 
     private void OnTriggerStay(Collider collider)
     {
@@ -49,6 +50,7 @@ public class Respawn : MonoBehaviour
             if (this.gameObject.tag == "Rum")
             {
                 cork.GetComponent<MeshRenderer>().enabled = false;
+
             }
 
             Invoke("Respawn_1", respawnTime);

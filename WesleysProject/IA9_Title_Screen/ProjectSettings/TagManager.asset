@@ -13,6 +13,9 @@ TagManager:
   - Log
   - SailCloth
   - Lava
+  - GreenMushroom
+  - RedMushroom
+  - BlueMushroom
   layers:
   - Default
   - TransparentFX
