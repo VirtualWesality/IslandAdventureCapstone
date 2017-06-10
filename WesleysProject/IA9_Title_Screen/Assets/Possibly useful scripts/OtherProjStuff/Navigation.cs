@@ -5,13 +5,15 @@ public class Navigation : MonoBehaviour {
 
 	public Transform[] patrolPath;
 	public bool isPatrolling;
+    public bool isResting;
 	public Transform playerLocation;
-	public float detectionRange = 10;
-    public float fov = 60.0f;
+	public float detectionRange = 40;
+    public float fov = 90.0f;
     public float maxDistance = 20.0f;
     public bool PlayerSighted;
     public Vector3 PlayerLastKnown;
 	private int nextPoint;
+    
 	private UnityEngine.AI.NavMeshAgent navAgent;
 	GameObject Player;
     Animator anim;
@@ -21,6 +23,7 @@ public class Navigation : MonoBehaviour {
 		navAgent = GetComponent<UnityEngine.AI.NavMeshAgent> ();
 		nextPoint = 0;
 		isPatrolling = true;
+        isResting = false;
 		Player = GameObject.FindGameObjectWithTag("Player");
         //Animation stuff
         anim = GetComponent<Animator>();
@@ -37,14 +40,21 @@ public class Navigation : MonoBehaviour {
         //Patrolling
 		if (isPatrolling) {
 			fov = 60.0f;
-			if (Vector3.Distance(transform.position, playerLocation.position) < detectionRange && canSeePlayer()) 
-			{	
-				isPatrolling = false;
-			}
-			else if (navAgent.remainingDistance < .8) {
-				nextPoint = (nextPoint + 1) % patrolPath.Length;
-				navAgent.SetDestination (patrolPath [nextPoint].position);
-			}
+            if (Vector3.Distance(transform.position, playerLocation.position) < detectionRange && canSeePlayer())
+            {
+                isPatrolling = false;
+                navAgent.speed = 6;
+                anim.SetFloat("Speed", navAgent.speed);
+                Debug.Log(navAgent.speed);
+            }
+            else if (navAgent.remainingDistance < .8)
+            {
+                nextPoint = (nextPoint + 1) % patrolPath.Length;
+                navAgent.SetDestination(patrolPath[nextPoint].position);
+                navAgent.speed = 3;
+                anim.SetFloat("Speed", navAgent.speed);
+                Debug.Log(navAgent.speed);
+            }
 		} 
 		else 
 		{
@@ -52,6 +62,10 @@ public class Navigation : MonoBehaviour {
 			fov = 360.0f;
 			if (Vector3.Distance (transform.position, playerLocation.position) > detectionRange) {	
 				isPatrolling = true;
+                if(isResting != true)
+                {
+
+                }
 				navAgent.SetDestination (patrolPath [nextPoint].position);
 			} else {
 				navAgent.SetDestination (playerLocation.position);
@@ -60,6 +74,12 @@ public class Navigation : MonoBehaviour {
 	}
     //End Patrolling This portion of the script uses pathfinding
     //Sight
+    /*private void OnTriggerEnter(Collider other)
+    {
+        navAgent.speed = 0;
+       // anim.SetTrigger();
+        
+    }*/
     bool canSeePlayer()
     {
         RaycastHit hit;
