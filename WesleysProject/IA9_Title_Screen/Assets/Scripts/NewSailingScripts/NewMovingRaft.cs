@@ -4,16 +4,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityStandardAssets.Characters.ThirdPerson;
 
-public class MovingRaft : MonoBehaviour
+public class NewMovingRaft : MonoBehaviour
 {
     Vector3 PointPos;
-    Transform Point;
+    public Transform Point;
     public float speed = 2f;
-    public int arraySpot = -1;
-    public GameManager gmScript;
+    public int arraySpot = 0;
+    public NewGameManager gmScript;
     public GameObject Player, Ethan;
-    public Raft raftScript;
-    public bool arrived = true;
+    public NewRaft raftScript;
+    public GameObject Test;
     
 
 	// Use this for initialization
@@ -29,12 +29,19 @@ public class MovingRaft : MonoBehaviour
 	void Update ()
     {
         //Only call this on NOT arrived
-        if (!arrived)
+        if (gmScript.currentIsland == 1)
         {
             TravelToIsland2(Point);
         }
-        else
-        { }              
+        else if (gmScript.currentIsland == 2)
+        {
+            TravelToIsland3(Point);
+        }
+        else if (gmScript.currentIsland == 3)
+        {
+            //Roll Credits baby!
+        }
+              
         //Player.transform.position = raftScript.playerSpawn.transform.position;
     }
 
@@ -53,13 +60,44 @@ public class MovingRaft : MonoBehaviour
             arraySpot += 1;
             Point = gmScript.setNextSailingSpot(arraySpot);
 
-            if (!Point)
+            if (Point == null)
             {
-                Player.transform.position = Ethan.transform.position;
+                this.enabled = false;
+                Player.transform.position = Test.transform.position;
                 Ethan.SetActive(false);
                 Player.SetActive(true);
-                arrived = true;
-                Player.GetComponent<ThirdPersonUserControl>().enabled = true;
+                
+                //arraySpot = -1;
+                //Point = gmScript.setNextIsland2SailingSpot(arraySpot);
+                gmScript.currentIsland++;
+                Debug.Log("It's lit");
+                
+            }
+        }
+    }
+
+    public void TravelToIsland3(Transform currentPoint)
+    {
+        PointPos = currentPoint.transform.position;
+
+        if (!(transform.position == PointPos))
+        {
+            transform.position = Vector3.MoveTowards(transform.position, PointPos, speed * Time.deltaTime);
+            directionToLook(Point);
+        }
+        else
+        {
+            arraySpot += 1;
+            Debug.Log("Island2 arraySpot: " + arraySpot);
+            Point = gmScript.setNextIsland2SailingSpot(arraySpot);
+
+            if (Point == null)
+            {
+                this.enabled = false;
+                Player.transform.position = Test.transform.position;
+                Ethan.SetActive(false);
+                Player.SetActive(true);
+                gmScript.currentIsland++;               
             }
         }
     }
