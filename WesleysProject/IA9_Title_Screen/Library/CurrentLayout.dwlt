@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 564
     height: 947
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -117,9 +117,15 @@ MonoBehaviour:
     x: 0
     y: 643
     width: 1356
+<<<<<<< HEAD
     height: 304
   m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
+=======
+    height: 305
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> refs/remotes/origin/master
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 15}
@@ -434,8 +440,12 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 505}
     m_SelectedIDs: e82a0000
     m_LastClickedID: 10984
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000ec2600004228000044280000e228000004290000ba2a00007c2b0000ea2b0000c62e0000882f0000ea300000f630000020310000303100004231000050330000f84f0000fa4f0000fc4f0000
 >>>>>>> master
+=======
+    m_ExpandedIDs: 00000000e0260000382800003a280000d8280000fa280000b02a0000722b0000e02b0000bc2e00007e2f0000e2300000ee30000018310000283100003a31000048330000ee4f0000f04f0000f24f0000
+>>>>>>> refs/remotes/origin/master
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -464,10 +474,14 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000c42600001c2800001e280000be280000e0280000982a00005a2b0000c82b0000a42e0000662f0000cc300000d830000002310000123100002431000032330000e64f0000e84f0000ea4f0000
 =======
     m_ExpandedIDs: 00000000ec2600004228000044280000e228000004290000ba2a00007c2b0000ea2b0000c62e0000882f0000ea300000f630000020310000303100004231000050330000f84f0000fa4f0000fc4f0000
 >>>>>>> master
+=======
+    m_ExpandedIDs: 00000000e0260000382800003a280000d8280000fa280000b02a0000722b0000e02b0000bc2e00007e2f0000e2300000ee30000018310000283100003a31000048330000ee4f0000f04f0000f24f0000
+>>>>>>> refs/remotes/origin/master
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -584,6 +598,7 @@ MonoBehaviour:
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_SelectedIDs: 7844fcff
     m_LastClickedID: -244616
     m_ExpandedIDs: 1250fcff6a5dfcfffcefffffe4fbffff00000000143500002a360000809303007695030088970300
@@ -600,12 +615,22 @@ MonoBehaviour:
       m_Name: Water4AdvancedReflectionSceneCamera
       m_OriginalName: Water4AdvancedReflectionSceneCamera
 >>>>>>> master
+=======
+    m_SelectedIDs: e8360000
+    m_LastClickedID: 14056
+    m_ExpandedIDs: c4fbffff00000000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+>>>>>>> refs/remotes/origin/master
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
       m_UserData: -297788
       m_IsWaitingForDelay: 0
@@ -617,6 +642,12 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 0
 >>>>>>> master
+=======
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+>>>>>>> refs/remotes/origin/master
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
@@ -653,14 +684,19 @@ MonoBehaviour:
     height: 622
   m_SceneLighting: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
   lastFramingTime: 14830.339970484029
 =======
   lastFramingTime: 121.5320847813598
 >>>>>>> master
+=======
+  lastFramingTime: 33.333441104889175
+>>>>>>> refs/remotes/origin/master
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
 <<<<<<< HEAD
     m_Target: {x: 259.05, y: 12.04847, z: 231.60379}
     speed: 2
@@ -670,6 +706,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 2039.4769, y: 2.9481788, z: 87.720314}
 >>>>>>> master
+=======
+    m_Target: {x: 259.05, y: 11.39, z: 232.23}
+    speed: 2
+    m_Value: {x: 259.05, y: 11.39, z: 232.23}
+>>>>>>> refs/remotes/origin/master
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -703,12 +744,16 @@ MonoBehaviour:
 =======
     m_Target: {x: -0.09382077, y: -0.7502533, z: 0.108992785, w: -0.64532036}
     speed: 2
-    m_Value: {x: -0.09382076, y: -0.7502532, z: 0.10899277, w: -0.6453203}
+    m_Value: {x: 0.09382078, y: 0.7502534, z: -0.108992785, w: 0.64532036}
   m_Size:
-    m_Target: 92.65976
+    m_Target: 7.5643344
     speed: 2
+<<<<<<< HEAD
     m_Value: 92.65976
 >>>>>>> master
+=======
+    m_Value: 7.5643344
+>>>>>>> refs/remotes/origin/master
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -718,7 +763,7 @@ MonoBehaviour:
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
   m_LastLockedObject: {fileID: 0}
-  m_ViewIsLockedToObject: 0
+  m_ViewIsLockedToObject: 1
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
