@@ -56,24 +56,14 @@ public class BookManager : MonoBehaviour {
             HasJournal = true;
             Destroy(GameObject.FindGameObjectWithTag("Journal"));
         }
-
-        if (this.GetComponent<Collider>() == raftCol)
-        {
-            //Dietrich->
-            //TODO:  Reference Book.cs, then -if (!bookpages[].contains bookpage_Raft) bookPages[]++ >> bookPages[totalPageCount] = sprite: bookpage_Raft
-            //Unsure how to reference the Book.cs script.  From there, it should be a simple matter to increment the number of pages, and change the last page to be bookpage_Raft.
-            //After that, make a collider for various objects we want to add to the journal, copy/paste, but instead of raftCol, use CatCol or whatever.  Could also
-            //create a bool for each page such as ContainsRaft() which will check if it contains the raft page.  Wouldn't be too difficult, but you'd only need to call that during a specific collision
-            //so it isn't really necessary.
-            //<- Dietrich
-        }
-               
+		               
     }
 
     
     void OnTriggerExit(Collider other)
     {
         JournalPanel.SetActive(true);
+		InventoryPanel.SetActive(true);
         book.SetActive(false);
     }
     
