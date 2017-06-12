@@ -45,7 +45,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 11
+  controlID: 49
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 12
+  controlID: 50
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 13
+  controlID: 51
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -405,19 +405,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Prefabs/Sloop
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Sloop
+  - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: F:\CapstoneStuff\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen
+  m_LastProjectPath: C:\Users\Ryan\Documents\GitHub\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 94}
-    m_SelectedIDs: 022c0000
-    m_LastClickedID: 11266
-    m_ExpandedIDs: 00000000b82600000c2800000e280000ac280000ce280000802a0000402b0000ae2b00006e2e00003c2f0000ec2f0000a2300000ae30000008330000aa4f0000ac4f0000ae4f000000ca9a3bffffff7f
+    m_SelectedIDs: 0c310000
+    m_LastClickedID: 12556
+    m_ExpandedIDs: 000000000c3100002e32000030320000bc320000dc3200005a340000f834000058350000ea3700009638000030390000c2390000cc390000063c0000de570000e0570000e257000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -445,7 +445,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b82600000c2800000e280000ac280000ce280000802a0000402b0000ae2b00006e2e00003c2f0000ec2f0000a2300000ae30000008330000aa4f0000ac4f0000ae4f0000
+    m_ExpandedIDs: 000000000c3100002e32000030320000bc320000dc3200005a340000f834000058350000ea3700009638000030390000c2390000cc390000063c0000de570000e0570000e2570000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -561,9 +561,9 @@ MonoBehaviour:
     height: 621
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b6370000
-    m_LastClickedID: 14262
-    m_ExpandedIDs: 12f0ffffe4fbffff0000000028350000
+    m_SelectedIDs: d2a2ffff
+    m_LastClickedID: -23854
+    m_ExpandedIDs: 249ffffff6aaffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -613,14 +613,14 @@ MonoBehaviour:
     width: 960
     height: 621
   m_SceneLighting: 1
-  lastFramingTime: 63.257966731958355
+  lastFramingTime: 153.04340271794527
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2079.5044, y: 17.699203, z: 166.9611}
+    m_Target: {x: 2035.2266, y: 17.379265, z: 126.37268}
     speed: 2
-    m_Value: {x: 2079.5044, y: 17.699203, z: 166.9611}
+    m_Value: {x: 2035.2266, y: 17.379265, z: 126.37268}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -643,13 +643,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.030672865, y: -0.94351894, z: 0.09114132, w: -0.3171381}
+    m_Target: {x: -0.1665416, y: -0.10661636, z: 0.018060194, w: -0.9800871}
     speed: 2
-    m_Value: {x: -0.030672068, y: -0.94349444, z: 0.09113895, w: -0.31712985}
+    m_Value: {x: -0.1665416, y: -0.10661636, z: 0.018060194, w: -0.9800871}
   m_Size:
-    m_Target: 250.4874
+    m_Target: 91.287926
     speed: 2
-    m_Value: 250.4874
+    m_Value: 91.287926
   m_Ortho:
     m_Target: 0
     speed: 2
