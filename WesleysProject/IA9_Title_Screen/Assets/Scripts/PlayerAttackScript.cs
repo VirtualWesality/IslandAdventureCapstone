@@ -10,6 +10,10 @@ public class PlayerAttackScript : MonoBehaviour {
     private bool EnemyInRange = false;
     private float attackCooldown = 1.0f;
     private bool atkCooldown = false;
+	GameObject enemy;
+	
+
+	
     
 	// Use this for initialization
 	void Start ()
@@ -23,15 +27,16 @@ public class PlayerAttackScript : MonoBehaviour {
     {
         if (Input.GetMouseButtonDown(0) && attackCooldown == 1.0f) //If player presses F
         {
-            anim.Play("SaberAnimation");     //Swing!       
-            if (EnemyInRange && !atkCooldown) //If enemy in range and your attack is not on cooldown...
-            {
-                /*Lower enemy health here! FOR REAL, THOUGH*/
-                
-                atkCooldown = true; //Put attack on cooldown
-                //Debug.Log("Attack!");
+			
+				anim.Play("SaberAnimation");     //Swing!       
+			if (EnemyInRange && !atkCooldown && enemy != null) //If enemy in range and your attack is not on cooldown...
+	            {
+	                /*Lower enemy health here! FOR REAL, THOUGH*/
+					DealDamage();
+	                atkCooldown = true; //Put attack on cooldown
+	                //Debug.Log("Attack!");
+	            }
 
-            }
         }
         
         if (atkCooldown) //If attack is on cooldown
@@ -50,6 +55,16 @@ public class PlayerAttackScript : MonoBehaviour {
     
 	}
 
+	void DealDamage()
+	{
+		EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth> ();
+		//EnemyHealth enemyHealth = GameObject.FindGameObjectWithTag("Enemy").
+		if (enemyHealth != null)
+		{
+			enemyHealth.TakeDamage(20);
+		}
+		else Debug.Log("Damage not working.");
+	}
     
 
     void OnTriggerEnter(Collider other)
@@ -57,7 +72,8 @@ public class PlayerAttackScript : MonoBehaviour {
         if (other.gameObject.tag == "Enemy")
         {
             EnemyInRange = true;
-            //Debug.Log("Enemy In Range.");
+			enemy = other.gameObject;
+            Debug.Log("Enemy In Range.");
         }
     }
 
@@ -66,7 +82,7 @@ public class PlayerAttackScript : MonoBehaviour {
         if (other.gameObject.tag == "Enemy")
         {
             EnemyInRange = false;
-            //Debug.Log("Enemy No Longer In Range.");
+            Debug.Log("Enemy No Longer In Range.");
         }
     }
 

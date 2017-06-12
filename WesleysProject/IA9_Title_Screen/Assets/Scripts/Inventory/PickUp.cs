@@ -32,7 +32,7 @@ public class PickUp : MonoBehaviour
     public int logCount = 0;
     public int sailClothCount = 0;
     public PlayerVitals vitalScript;
-    public int CocoCount, rumCount, gMushCount, bMushCount, rMushCount;  
+    public int CocoCount, rumCount, gMushCount, bMushCount, rMushCount, leatherCount;  
     
 
     private void OnTriggerStay(Collider collision)
@@ -83,6 +83,11 @@ public class PickUp : MonoBehaviour
                     {
                         bMushCount++;
                     }
+					if (collision.gameObject.tag == "Leather")
+					{
+						leatherCount++;
+						Debug.Log(leatherCount);
+					}
                     return;
                 }
             }

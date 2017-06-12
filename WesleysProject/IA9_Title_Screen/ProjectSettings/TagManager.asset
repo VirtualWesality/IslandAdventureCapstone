@@ -17,6 +17,7 @@ TagManager:
   - RedMushroom
   - BlueMushroom
   - Enemy
+  - Leather
   layers:
   - Default
   - TransparentFX
