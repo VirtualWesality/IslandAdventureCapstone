@@ -16,6 +16,7 @@ TagManager:
   - GreenMushroom
   - RedMushroom
   - BlueMushroom
+  - Enemy
   layers:
   - Default
   - TransparentFX

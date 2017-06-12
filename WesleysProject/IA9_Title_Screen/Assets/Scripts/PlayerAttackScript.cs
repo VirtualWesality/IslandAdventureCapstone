@@ -4,7 +4,12 @@ using UnityEngine;
 
 
 public class PlayerAttackScript : MonoBehaviour {
+
     public Animator anim;
+    public Collider collider;
+    private bool EnemyInRange = false;
+    private float attackCooldown = 1.0f;
+    private bool atkCooldown = false;
     
 	// Use this for initialization
 	void Start ()
@@ -16,19 +21,53 @@ public class PlayerAttackScript : MonoBehaviour {
 
 	void Update ()
     {
-        if (Input.GetKeyDown(KeyCode.F)) //If player presses F
+        if (Input.GetMouseButtonDown(0) && attackCooldown == 1.0f) //If player presses F
         {
-            anim.SetBool("SwordSwing", true);
-            
-            anim.SetBool("SwordSwing", false);
-            //Attack();//Call Attack
+            anim.Play("SaberAnimation");     //Swing!       
+            if (EnemyInRange && !atkCooldown) //If enemy in range and your attack is not on cooldown...
+            {
+                /*Lower enemy health here! FOR REAL, THOUGH*/
+                
+                atkCooldown = true; //Put attack on cooldown
+                //Debug.Log("Attack!");
+
+            }
         }
-		
+        
+        if (atkCooldown) //If attack is on cooldown
+        {
+            attackCooldown -= Time.deltaTime;      //Decrement for 1 second      
+            //Debug.Log(attackCooldown);
+
+            if (attackCooldown < 0) //If cooldown reaches 0
+            {
+                attackCooldown = 1.0f; //Reset cooldown timer to 1
+                atkCooldown = false; // Remove the cooldown
+               // Debug.Log(attackCooldown);
+            }
+        }
+
+    
 	}
 
-    private void Attack() //Called on click
-    {        
-       //  anim.Play(anim.clip.name);//Play the attack animation
+    
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            EnemyInRange = true;
+            //Debug.Log("Enemy In Range.");
+        }
     }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            EnemyInRange = false;
+            //Debug.Log("Enemy No Longer In Range.");
+        }
+    }
+
 }
