@@ -11,7 +11,6 @@ public class menuScript : MonoBehaviour {
     public Button startText;
     public Button exitText;
     public Button optionsText;
-    public Button creditsText;
 
 	// Use this for initialization
 	void Start ()
@@ -21,7 +20,6 @@ public class menuScript : MonoBehaviour {
         startText = startText.GetComponent<Button>();
         exitText = exitText.GetComponent<Button>();
         optionsText = optionsText.GetComponent<Button>();
-        creditsText = creditsText.GetComponent<Button>();
         quitMenu.enabled = false;
         optionsMenu.enabled = false;
 
@@ -33,7 +31,6 @@ public class menuScript : MonoBehaviour {
         startText.enabled = false;
         exitText.enabled = false;
         optionsText.enabled = false;
-        creditsText.enabled = false;
     }
 
     public void OptionsPress()
@@ -41,8 +38,7 @@ public class menuScript : MonoBehaviour {
         optionsMenu.enabled = true;
         optionsText.enabled = false;    
         startText.enabled = false;
-        exitText.enabled = false;
-        creditsText.enabled = false;
+        exitText.enabled = false;     
     }
 
     public void ConfirmPress()
@@ -50,8 +46,7 @@ public class menuScript : MonoBehaviour {
         optionsMenu.enabled = false;
         optionsText.enabled = true;       
         startText.enabled = true;
-        exitText.enabled = true;
-        creditsText.enabled = true;
+        exitText.enabled = true;      
     }
 
     public void NoPress()
@@ -60,17 +55,11 @@ public class menuScript : MonoBehaviour {
         startText.enabled = true;
         exitText.enabled = true;
         optionsText.enabled = true;
-        creditsText.enabled = true;
     }
 
     public void StartLevel()
     {
         SceneManager.LoadScene("Island1");
-    }
-
-    public void CreditsPress()
-    {
-        //SceneManager.LoadScene();
     }
 
     public void ExitGame()

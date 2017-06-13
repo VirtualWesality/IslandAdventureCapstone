@@ -1252,7 +1252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca9b771c483bd4244880dfb311b0ab1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 10
+  currentHealth: 100
   Leather: {fileID: 1299164804429378, guid: b20ecd9fbf4e76c4293989c9fafb915f, type: 2}
   player: {fileID: 0}
   anim: {fileID: 0}

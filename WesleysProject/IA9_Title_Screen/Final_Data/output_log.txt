@@ -1,0 +1,76 @@
+Initialize engine version: 5.6.1f1 (2860b30f0b54)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon R9 200 Series (ID=0x67b0)
+    Vendor:   ATI
+    VRAM:     3072 MB
+    Driver:   22.19.162.4
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Ryan\Desktop\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\Final_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Ryan\Desktop\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\Final_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Ryan\Desktop\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\Final_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Ryan\Desktop\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\Final_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Ryan\Desktop\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\Final_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Ryan\Desktop\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\Final_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Ryan\Desktop\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\Final_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Ryan\Desktop\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\Final_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Ryan\Desktop\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\Final_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Ryan\Desktop\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\Final_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Ryan\Desktop\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\Final_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\Ryan\Desktop\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\Final_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.025 seconds
+Platform assembly: C:\Users\Ryan\Desktop\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\Final_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Ryan\Desktop\IslandAdventureCapstone\WesleysProject\IA9_Title_Screen\Final_Data\Managed\System.dll (this message is harmless)
+<RI> Initializing input.
+<RI> Input initialized.
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
+<RI> Initialized touch support.
+UnloadTime: 1.098744 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at SettingManager.OnFxVolumeChange () [0x00000] in <filename unknown>:0 
+  at SettingManager.<OnEnable>m__6 (Single ) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall`1[System.Single].Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at SettingManager.LoadSettings () [0x00000] in <filename unknown>:0 
+  at SettingManager.OnEnable () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Setting up 4 worker threads for Enlighten.
+  Thread -> id: 838 -> priority: 1 
+  Thread -> id: fa8 -> priority: 1 
+  Thread -> id: 410 -> priority: 1 
+  Thread -> id: 2164 -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.635371 ms
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 6752.
+Total: 2.937286 ms (FindLiveObjects: 0.229854 ms CreateObjectMapping: 0.081485 ms MarkObjects: 1.066909 ms  DeleteObjects: 1.558452 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.732336 ms
+NullReferenceException: Object reference not set to an instance of an object
+  at SettingManager.OnMusicVolumeChange () [0x00000] in <filename unknown>:0 
+  at SettingManager.<OnEnable>m__5 (Single ) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCall`1[System.Single].Invoke (System.Object[] args) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.InvokableCallList.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEventBase.Invoke (System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at UnityEngine.Events.UnityEvent`1[System.Single].Invoke (Single arg0) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.Set (Single input) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Slider.set_value (Single value) [0x00000] in <filename unknown>:0 
+  at SettingManager.LoadSettings () [0x00000] in <filename unknown>:0 
+  at SettingManager.OnEnable () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+
+Unloading 1031 unused Assets to reduce memory usage. Loaded Objects now: 1091.
+Total: 9.987413 ms (FindLiveObjects: 0.089371 ms CreateObjectMapping: 0.081193 ms MarkObjects: 0.434006 ms  DeleteObjects: 9.382258 ms)
+

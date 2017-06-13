@@ -37,9 +37,8 @@ public class NewRaft : MonoBehaviour {
             {
                 finishedRaft2.GetComponent<NewMovingRaft>().enabled = true;
             }
+
             
-
-
             Player.GetComponent<PickUp>().logCount = 0;
             Player.GetComponent<PickUp>().sailClothCount = 0;
 
@@ -95,11 +94,10 @@ public class NewRaft : MonoBehaviour {
             {
                 finishedRaft2.transform.GetChild(1).gameObject.SetActive(true);
             }
-
-            if (gmScript.currentIsland == 3)
-            {
-                SceneManager.LoadScene("Credits");
-            }
+			if (gmScript.currentIsland == 3)
+			{
+				SceneManager.LoadScene("Credits");
+			}
 
             //Show Raft
             if (gmScript.currentIsland == 1)
@@ -128,47 +126,34 @@ public class NewRaft : MonoBehaviour {
 
 
         if (gmScript.currentIsland == 1)
-        {
-            if (other.tag == "Player" && logCount >= 0)
-            {
-                inRaftRange = true;
-            }
-
-       /*
-       //One that works. Using one above for ease of testing purposes
-       if (other.tag == "Player" && logCount >= 6 && sailClothCount >= 1 && BookManager.GetComponent<BookManager>().HasJournal == true && ropeCount >=1)
+        {       
+			if (other.tag == "Player" && logCount >= 6 && sailClothCount >= 1 && ropeCount >=1 && BookManager.GetComponent<BookManager>().HasJournal == true)
        {
            inRaftRange = true;          
        }
-       */
+       
         }
 
         if (gmScript.currentIsland == 2)
         {
-            if (other.tag == "Player" && logCount >= 0)
+
+            
+            if (other.tag == "Player" && logCount >= 12 && ropeCount >= 5 && leatherCount >= 2 )
             {
                 inRaftRange = true;
             }
-            /*
-            if (other.tag == "Player" && logCount >= 8 && ropeCount >= 2 && leatherCount >= 2 )
-            {
-                inRaftRange = true;
-            }
-            */
+            
         }
 
         if (gmScript.currentIsland == 3)
         {
-            if (other.tag == "Player" && logCount >= 0)
+
+            
+            if (other.tag == "Player" && logCount >= 10 && ropeCount >= 5 && leatherCount >= 5)
             {
                 inRaftRange = true;
             }
-            /*
-            if (other.tag == "Player" && logCount >= 10 && ropeCount >= 3 && leatherCount >= 5)
-            {
-                inRaftRange = true;
-            }
-            */
+            
         }
 
 

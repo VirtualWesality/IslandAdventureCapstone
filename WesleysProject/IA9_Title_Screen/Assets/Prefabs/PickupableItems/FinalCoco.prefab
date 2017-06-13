@@ -112,8 +112,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cork: {fileID: 0}
-  respawnTime: 5
+  respawnTime: 60
   pickUpScript: {fileID: 0}
+  playVit: {fileID: 0}
 --- !u!135 &135413082513072894
 SphereCollider:
   m_ObjectHideFlags: 1
