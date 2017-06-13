@@ -25,7 +25,9 @@ public class Respawn : MonoBehaviour
 		{
 			pickUpScript = GameObject.Find("FPSController").GetComponent<PickUp>();
 		}
-	}
+        pickUpScript = GameObject.Find("FPSController").GetComponent<PickUp>();
+
+    }
 
     private void OnTriggerStay(Collider collider)
     {
@@ -47,6 +49,16 @@ public class Respawn : MonoBehaviour
                 for (int i = 0; i < 6; i++)
                 {
                     this.gameObject.transform.GetChild(i).GetComponent<MeshRenderer>().enabled = false;
+                }
+            }
+            if (this.gameObject.tag == "BlueMushroom" || this.gameObject.tag == "GreenMushroom" || this.gameObject.tag == "RedMushroom")
+            {
+                if (this.gameObject.transform.GetChild(0))
+                {
+                    for (int i = 0; i < this.gameObject.transform.childCount; i++)
+                    {
+                        this.gameObject.transform.GetChild(i).GetComponent<MeshRenderer>().enabled = false;
+                    }
                 }
             }
 
