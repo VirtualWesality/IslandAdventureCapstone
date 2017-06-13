@@ -6,9 +6,9 @@ public class Navigation : MonoBehaviour {
 	public Transform[] patrolPath;
 	public bool isPatrolling;
 	public Transform playerLocation;
-	public float detectionRange = 10;
-    public float fov = 60.0f;
-    public float maxDistance = 20.0f;
+	public float detectionRange = 30;
+    public float fov = 90.0f;
+    public float maxDistance = 30.0f;
     public bool PlayerSighted;
     public Vector3 PlayerLastKnown;
 	private int nextPoint;
@@ -45,7 +45,7 @@ public class Navigation : MonoBehaviour {
         //End Attack
         //Patrolling
 		if (isPatrolling) {
-			fov = 60.0f;
+			fov = 90.0f;
 			if (Vector3.Distance(transform.position, playerLocation.position) < detectionRange && canSeePlayer()) 
 			{	
 				isPatrolling = false;
@@ -64,7 +64,7 @@ public class Navigation : MonoBehaviour {
 		{
 			
 			fov = 360.0f;
-			if (Vector3.Distance (transform.position, playerLocation.position) > detectionRange) {	
+			if (Vector3.Distance (transform.position, playerLocation.position) < detectionRange) {	
 				isPatrolling = true;
 				navAgent.SetDestination (patrolPath [nextPoint].position);
 			} else {
