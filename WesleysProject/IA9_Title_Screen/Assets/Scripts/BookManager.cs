@@ -13,12 +13,15 @@ public class BookManager : MonoBehaviour {
     public Collider raftCol;
     public bool HasJournal;
     public GameObject InventoryPanel, JournalPanel;
+    public GameObject FPSController;
+    
 
 	// Use this for initialization
 	void Start ()
     {
         book.SetActive(false);
         HasJournal = false;
+
 	}
 	
 	// Update is called once per frame
@@ -30,9 +33,11 @@ public class BookManager : MonoBehaviour {
             {
                 if (book.activeSelf)
                 {
+                    
                     book.SetActive(false);
                     InventoryPanel.SetActive(true);
                     JournalPanel.SetActive(true);
+                   
                 }
                 else
                 {
@@ -42,6 +47,25 @@ public class BookManager : MonoBehaviour {
                 }
             }
         }
+
+        if (HasJournal)
+        {
+            if (book.activeSelf)
+            {
+                if (Input.GetKeyDown(KeyCode.LeftBracket))
+                {
+                    //page left
+                    book.GetComponent<AutoFlip>().FlipLeftPage();
+                }
+                if (Input.GetKeyDown(KeyCode.RightBracket))
+                {
+                    //page right
+                    book.GetComponent<AutoFlip>().FlipRightPage();
+                }
+            }
+        }
+
+
     }
 
     void OnTriggerEnter(Collider other)
@@ -65,6 +89,8 @@ public class BookManager : MonoBehaviour {
         JournalPanel.SetActive(true);
 		InventoryPanel.SetActive(true);
         book.SetActive(false);
+
+        Destroy(this.gameObject.GetComponent<BoxCollider>());
     }
     
     public void ExitPress()

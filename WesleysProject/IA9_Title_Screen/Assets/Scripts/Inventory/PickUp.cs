@@ -33,6 +33,7 @@ public class PickUp : MonoBehaviour
     public int sailClothCount = 0;
     public PlayerVitals vitalScript;
     public int CocoCount, rumCount, gMushCount, bMushCount, rMushCount, leatherCount;  
+    public GameObject logEmpt;
     
 
     private void OnTriggerStay(Collider collision)
@@ -132,6 +133,26 @@ public class PickUp : MonoBehaviour
                 sailClothCount = 1;
             }
 
+            if (collision.gameObject.tag == "GreenMushroom")
+            {
+                i = Instantiate(InventoryIcon[5]);
+                i.transform.SetParent(InventoryPanel.transform);
+                gMushCount = 1;
+            }
+
+            if (collision.gameObject.tag == "BlueMushroom")
+            {
+                i = Instantiate(InventoryIcon[6]);
+                i.transform.SetParent(InventoryPanel.transform);
+                bMushCount = 1;
+            }
+            if (collision.gameObject.tag == "RedMushroom")
+            {
+                i = Instantiate(InventoryIcon[7]);
+                i.transform.SetParent(InventoryPanel.transform);
+                rMushCount = 1;
+            }
+
             pickedUp = false;
         }
       
@@ -139,7 +160,7 @@ public class PickUp : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             if (CocoCount > 0)
             {
@@ -154,13 +175,58 @@ public class PickUp : MonoBehaviour
             }
         }
 
-        if (Input.GetKey(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             if (rumCount > 0)
             {
                 foreach (Transform child in InventoryPanel.transform)
                 {
                     if (child.gameObject.tag == "Rum")
+                    {
+
+                        child.GetComponent<eat>().eatme();
+                    }
+                }
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            if (rMushCount > 0)
+            {
+                foreach (Transform child in InventoryPanel.transform)
+                {
+                    if (child.gameObject.tag == "RedMushroom")
+                    {
+
+                        child.GetComponent<eat>().eatme();
+                    }
+                }
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            if (gMushCount > 0)
+            {
+                foreach (Transform child in InventoryPanel.transform)
+                {
+                    if (child.gameObject.tag == "GreenMushroom")
+                    {
+
+                        child.GetComponent<eat>().eatme();
+                    }
+                }
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            if (bMushCount > 0)
+            {
+                foreach (Transform child in InventoryPanel.transform)
+                {
+                    if (child.gameObject.tag == "BlueMushroom")
                     {
 
                         child.GetComponent<eat>().eatme();
