@@ -1690,6 +1690,7 @@ GameObject:
   - component: {fileID: 4768072926090334}
   - component: {fileID: 33239713035166644}
   - component: {fileID: 23545290709536162}
+  - component: {fileID: 65154974149129654}
   m_Layer: 0
   m_Name: Log5
   m_TagString: Untagged
@@ -2240,13 +2241,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1851468350827560}
-  m_LocalRotation: {x: -0.6651306, y: -0, z: -0, w: 0.7467271}
-  m_LocalPosition: {x: -0.08, y: 0.33, z: -0.02}
+  m_LocalRotation: {x: -0.6925572, y: -0.0000000018626454, z: 3.49246e-10, w: 0.721363}
+  m_LocalPosition: {x: -0.08, y: 1.54, z: -0.49}
   m_LocalScale: {x: 20.000076, y: 116.03027, z: 20.00004}
   m_Children: []
   m_Father: {fileID: 4320469659721452}
   m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -87.666, y: 0, z: 0}
 --- !u!4 &4361930557706354
 Transform:
   m_ObjectHideFlags: 1
@@ -3823,6 +3824,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1059003696875902}
   m_Mesh: {fileID: 4300018, guid: 02843ef46bd749242a9c120cc0adba29, type: 3}
+--- !u!65 &65154974149129654
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1998801666631752}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 11.85, y: 2.0000005, z: 1.9021138}
+  m_Center: {x: -3.99, y: 0.0000038146973, z: -0.000003874302}
 --- !u!81 &81780087148277920
 AudioListener:
   m_ObjectHideFlags: 1
@@ -3889,7 +3902,7 @@ MonoBehaviour:
   Player: {fileID: 0}
   Ethan: {fileID: 1031834064886442}
   raftScript: {fileID: 0}
-  Test: {fileID: 0}
+  Test: {fileID: 1851468350827560}
 --- !u!124 &124325710887549528
 Behaviour:
   m_ObjectHideFlags: 1

@@ -28,6 +28,7 @@ public class Navigation : MonoBehaviour {
 		nextPoint = 0;
 		isPatrolling = true;
 		Player = GameObject.FindGameObjectWithTag("Player");
+        playerLocation = Player.transform;
         //Animation stuff
         anim = GetComponent<Animator>();
 		playerVitals = Player.GetComponent<PlayerVitals>();
@@ -48,11 +49,16 @@ public class Navigation : MonoBehaviour {
 			if (Vector3.Distance(transform.position, playerLocation.position) < detectionRange && canSeePlayer()) 
 			{	
 				isPatrolling = false;
+                navAgent.speed = 6;
+                anim.SetFloat("Speed", navAgent.speed);
+
 			}
 			else if (navAgent.remainingDistance < .8) {
 				nextPoint = (nextPoint + 1) % patrolPath.Length;
 				navAgent.SetDestination (patrolPath [nextPoint].position);
-			}
+                navAgent.speed = 3;
+                anim.SetFloat("Speed", navAgent.speed);
+            }
 		} 
 		else 
 		{
@@ -98,6 +104,7 @@ public class Navigation : MonoBehaviour {
 			{
 				cooldownTimer = 2.0f; //reset the cooldown timer to 2 seconds
 				cooldown = false; //attack is no longer on cooldown
+                
 			}
 		}
 

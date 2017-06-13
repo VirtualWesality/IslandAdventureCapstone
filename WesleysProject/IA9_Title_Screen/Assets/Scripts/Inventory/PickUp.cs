@@ -32,7 +32,7 @@ public class PickUp : MonoBehaviour
     public int logCount = 0;
     public int sailClothCount = 0;
     public PlayerVitals vitalScript;
-    public int CocoCount, rumCount, gMushCount, bMushCount, rMushCount, leatherCount;  
+    public int CocoCount, rumCount, ropeCount, gMushCount, bMushCount, rMushCount, leatherCount;  
     public GameObject logEmpt;
     
 
@@ -68,6 +68,11 @@ public class PickUp : MonoBehaviour
                     if (collision.gameObject.tag == "Rum")
                     {
                         rumCount++;
+                    }
+
+                    if (collision.gameObject.tag == "RopeCoil")
+                    {
+                        ropeCount++;
                     }
 
                     if (collision.gameObject.tag == "GreenMushroom")
@@ -117,6 +122,7 @@ public class PickUp : MonoBehaviour
             {
                 i = Instantiate(InventoryIcon[2]);
                 i.transform.SetParent(InventoryPanel.transform);
+                ropeCount = 1;
             }
 
             if (collision.gameObject.tag == "Log")
@@ -146,11 +152,19 @@ public class PickUp : MonoBehaviour
                 i.transform.SetParent(InventoryPanel.transform);
                 bMushCount = 1;
             }
+
             if (collision.gameObject.tag == "RedMushroom")
             {
                 i = Instantiate(InventoryIcon[7]);
                 i.transform.SetParent(InventoryPanel.transform);
                 rMushCount = 1;
+            }
+
+            if (collision.gameObject.tag == "Leather")
+            {
+                i = Instantiate(InventoryIcon[8]);
+                i.transform.SetParent(InventoryPanel.transform);
+                leatherCount = 1;
             }
 
             pickedUp = false;

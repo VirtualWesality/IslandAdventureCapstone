@@ -122,6 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AudioManager: {fileID: 0}
   VitalScript: {fileID: 0}
+  gMushTimer: 10
 --- !u!114 &114414207652594300
 MonoBehaviour:
   m_ObjectHideFlags: 1
