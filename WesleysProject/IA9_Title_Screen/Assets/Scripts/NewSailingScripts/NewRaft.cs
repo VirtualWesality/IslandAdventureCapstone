@@ -37,8 +37,9 @@ public class NewRaft : MonoBehaviour {
             {
                 finishedRaft2.GetComponent<NewMovingRaft>().enabled = true;
             }
-
             
+
+
             Player.GetComponent<PickUp>().logCount = 0;
             Player.GetComponent<PickUp>().sailClothCount = 0;
 
@@ -93,6 +94,11 @@ public class NewRaft : MonoBehaviour {
             if (gmScript.currentIsland == 2)
             {
                 finishedRaft2.transform.GetChild(1).gameObject.SetActive(true);
+            }
+
+            if (gmScript.currentIsland == 3)
+            {
+                SceneManager.LoadScene("Credits");
             }
 
             //Show Raft
