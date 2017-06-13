@@ -7,9 +7,13 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Title.unity
+    guid: a89e148c0fe09d54fb8b3fc2d169236a
   - enabled: 1
     path: Assets/Scenes/Island1.unity
-  - enabled: 1
+    guid: 94bbb452b2002f34b8768fef8caa791a
+  - enabled: 0
     path: Assets/Scenes/IslandTwoElectricBoogaloo.unity
-  - enabled: 1
+    guid: e57f626d64fd71543a21abf931037609
+  - enabled: 0
     path: Assets/Scenes/island3.unity
+    guid: e4d27295e8eb2f24d83f2dbabcdc5172
