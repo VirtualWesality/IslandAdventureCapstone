@@ -17,9 +17,15 @@ public class Navigation : MonoBehaviour {
 	private UnityEngine.AI.NavMeshAgent navAgent;
 	GameObject Player;
     Animator anim;
+	int currentAttack = 0;
+	string attackAnim;
+	PlayerVitals playerVitals;
+	private bool cooldown;
+	private float cooldownTimer = 2.0f;
 
     // Use this for initialization
-    void Start () {
+    void Start () 
+	{
 		navAgent = GetComponent<UnityEngine.AI.NavMeshAgent> ();
 		nextPoint = 0;
 		isPatrolling = true;
@@ -27,10 +33,12 @@ public class Navigation : MonoBehaviour {
 		Player = GameObject.FindGameObjectWithTag("Player");
         //Animation stuff
         anim = GetComponent<Animator>();
+		playerVitals = Player.GetComponent<PlayerVitals>();
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
         //Animation
         anim.SetFloat("Speed", navAgent.speed);
         //End Animation
@@ -71,6 +79,43 @@ public class Navigation : MonoBehaviour {
 				navAgent.SetDestination (playerLocation.position);
 			}
 		}
+
+		/*CAT ATTACKING*/
+		//Switch between different attack animations
+
+		if(currentAttack == 0)
+		{
+			attackAnim = "Big_Cat_Swipe01";
+		}
+		else if (currentAttack == 1)
+		{
+			attackAnim = "Big_Cat_Bite";						
+		}
+		else if (currentAttack == 2)
+		{
+			attackAnim = "Big_Cat_Swipe02";
+		}
+
+
+		if (Vector3.Distance(transform.position, playerLocation.position) < 4 && canSeePlayer() && cooldown == false) //If the cat is within range and can see the player, and attack is not on cooldown
+		{
+			anim.Play(attackAnim); //Play one of the three attack animations
+			currentAttack = (currentAttack +1) % 3; //Change the attack animation that the cat will use next
+			playerVitals.healthSlider.value -= 20; //Decrease player's health by 20
+			cooldown = true; //Put attack on cooldown
+		}
+
+		if (cooldown) //If attack is on cooldown
+		{
+			cooldownTimer -= Time.deltaTime; //count down for two seconds
+			if(cooldownTimer <= 0) //Once two seconds is up
+			{
+				cooldownTimer = 2.0f; //reset the cooldown timer to 2 seconds
+				cooldown = false; //attack is no longer on cooldown
+			}
+		}
+
+
 	}
     //End Patrolling This portion of the script uses pathfinding
     //Sight

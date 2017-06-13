@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerVitals : MonoBehaviour {
 
     public Slider healthSlider, thirstSlider, hungerSlider;
-    public int maxHealth, healthFallRate;
+    public int maxHealth, healthFallRate, healthGainRate;
     public float maxThirst, thirstFallRate;
     public float maxHunger, hungerFallRate;
 
@@ -33,6 +34,11 @@ public class PlayerVitals : MonoBehaviour {
         {
             healthSlider.value -= Time.deltaTime / healthFallRate;
         }
+		else if (hungerSlider.value >= 50 && thirstSlider.value >= 50 && healthSlider.value < maxHealth)
+		{
+			healthSlider.value += Time.deltaTime / healthGainRate;
+		}
+
 
         if (healthSlider.value <= 0)
         {
@@ -71,7 +77,8 @@ public class PlayerVitals : MonoBehaviour {
     void CharacterDeath()
     {
         //Do something death related
-    }
+		SceneManager.LoadScene("Title");
+	}
 
     public void OnTriggerStay(Collider other)
     {

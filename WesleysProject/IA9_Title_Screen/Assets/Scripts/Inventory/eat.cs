@@ -7,6 +7,8 @@ public class eat : MonoBehaviour
 {
     public GameObject AudioManager;
     public PlayerVitals VitalScript;
+    public float gMushTimer = 10.0f;
+    private bool gMushBuff = false;
 
     /// <summary>
     /// Written by: Tim Allen
@@ -22,6 +24,12 @@ public class eat : MonoBehaviour
     //Add different eatme() funcstions for the different Items. logs may not be able to be consumed
     //Certain objects can play a certain sound when consumed
 
+    private void Start()
+    {
+        VitalScript = GameObject.Find("FPSController").GetComponent<PlayerVitals>();
+    }
+
+    
 
     public void eatme()
     {
@@ -30,19 +38,44 @@ public class eat : MonoBehaviour
             if (gameObject.tag == "Rum" || gameObject.tag == "Coconut" || gameObject.tag == "RedMushroom" || gameObject.tag == "GreenMushroom" || gameObject.tag == "BlueMushroom")
             {
                 Eat();
+                if (gameObject.tag == "GreenMushroom")
+                gMushBuff = true;
             }
         }
         else if (System.Int32.Parse(this.transform.Find("Text").GetComponent<Text>().text) == 1) //If you only have one left 
         {
-            if (gameObject.tag == "Rum" || gameObject.tag == "Coconut" || gameObject.tag == "RedMushroom" || gameObject.tag == "GreenMushroom" || gameObject.tag == "BlueMushroom")
+            if (gameObject.tag == "Rum" || gameObject.tag == "Coconut" || gameObject.tag == "RedMushroom" || gameObject.tag == "BlueMushroom")
             {
                 Eat();
                 Destroy(this.gameObject);
             }
+            else if (gameObject.tag == "GreenMushroom")
+            {
+                gMushBuff = true;
+                Eat();
+                
+            }
             
         }
     }
-
+    private void Update()
+    {
+        if (gMushBuff)
+        {
+            VitalScript.thirstFallRate = 500;
+            gMushTimer -= Time.deltaTime;
+            if (gMushTimer <= 0)
+            {
+                gMushTimer = 120;
+                VitalScript.thirstFallRate = 2;
+                gMushBuff = false;
+                if (System.Int32.Parse(this.transform.Find("Text").GetComponent<Text>().text) == 0)
+                {
+                    Destroy(this.gameObject);
+                }
+            }
+        }
+    }
 
     //Call Eat when you press 1-6 on relevant item
 
@@ -66,8 +99,7 @@ public class eat : MonoBehaviour
         }
         else if (gameObject.tag == "GreenMushroom")
         {
-            //PAUSE THIRST DRAIN FOR 2(?) MINUTES
-            StartCoroutine(GreenMushroomWait());
+            //PAUSE THIRST DRAIN FOR 2(?) MINUTES           
         }
         else if (gameObject.tag == "BlueMushroom")
         {
@@ -83,7 +115,7 @@ public class eat : MonoBehaviour
     {
         VitalScript.thirstFallRate = 500;
         
-        yield return new WaitForSeconds(10); //Change to 120 after done testing
+        yield return new WaitForSeconds(2); //Change to 120 after done testing
         Debug.Log("Booyah");
         VitalScript.thirstFallRate = 0.1f;
     }

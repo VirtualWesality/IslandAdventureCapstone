@@ -19,6 +19,16 @@ public class Respawn : MonoBehaviour
     public PickUp pickUpScript;
     public PlayerVitals playVit;
 
+	void Start ()
+	{
+		if (this.gameObject.tag == "Leather")
+		{
+			pickUpScript = GameObject.Find("FPSController").GetComponent<PickUp>();
+		}
+        pickUpScript = GameObject.Find("FPSController").GetComponent<PickUp>();
+
+    }
+
     private void OnTriggerStay(Collider collider)
     {
         if (Input.GetKey(KeyCode.F))
@@ -41,6 +51,16 @@ public class Respawn : MonoBehaviour
                     this.gameObject.transform.GetChild(i).GetComponent<MeshRenderer>().enabled = false;
                 }
             }
+            if (this.gameObject.tag == "BlueMushroom" || this.gameObject.tag == "GreenMushroom" || this.gameObject.tag == "RedMushroom")
+            {
+                if (this.gameObject.transform.GetChild(0))
+                {
+                    for (int i = 0; i < this.gameObject.transform.childCount; i++)
+                    {
+                        this.gameObject.transform.GetChild(i).GetComponent<MeshRenderer>().enabled = false;
+                    }
+                }
+            }
 
             if (this.gameObject.tag == "SailCloth")
             {
@@ -52,6 +72,10 @@ public class Respawn : MonoBehaviour
                 cork.GetComponent<MeshRenderer>().enabled = false;
 
             }
+			if (this.gameObject.tag == "Leather")
+			{
+				this.gameObject.SetActive(false);
+			}
 
             Invoke("Respawn_1", respawnTime);
 
